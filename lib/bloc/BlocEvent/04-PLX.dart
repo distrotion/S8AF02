@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../data/model.dart';
+import '../../page/P4PLX/PLXVar.dart';
 
 abstract class PLXDataSetEvent {}
 
@@ -29,7 +30,7 @@ class PLXDataSetBloc extends Bloc<PLXDataSetEvent, List<dataset>> {
   Future<void> _getdata(
       List<dataset> toAdd, Emitter<List<dataset>> emit) async {
     final response = await Dio().post(
-      server + "getPLXmaster",
+      server + "getplxmaster",
       data: {},
     );
     List<dataset> output = [];
@@ -96,42 +97,42 @@ class PLXDataSetBloc extends Bloc<PLXDataSetEvent, List<dataset>> {
   Future<void> _updata(List<dataset> toAdd, Emitter<List<dataset>> emit) async {
 //--------------------------- return
     final response = await Dio().post(
-      server + "upPLXmaster",
+      server + "upplxmaster",
       data: {
-        // "MATNO": PLX.con01,
-        // "ProductName": PLX.con02,
-        // "SPEC": {
-        //   "COLOR": PLX.con03,
-        //   "APPEARANCE": PLX.con04,
-        //   "SG": {
-        //     "HI": PLX.conMAX01,
-        //     "LOW": PLX.conMIN01,
-        //   },
-        //   "FA": {
-        //     "HI": PLX.conMAX02,
-        //     "LOW": PLX.conMIN02,
-        //   },
-        //   "TA": {
-        //     "HI": PLX.conMAX03,
-        //     "LOW": PLX.conMIN03,
-        //   },
-        //   "T_Al": {
-        //     "HI": PLX.conMAX04,
-        //     "LOW": PLX.conMIN04,
-        //   },
-        //   "PH": {
-        //     "HI": PLX.conMAX05,
-        //     "LOW": PLX.conMIN05,
-        //   },
-        //   "NVC": {
-        //     "HI": PLX.conMAX06,
-        //     "LOW": PLX.conMIN06,
-        //   },
-        //   "PURITY": {
-        //     "HI": PLX.conMAX07,
-        //     "LOW": PLX.conMIN07,
-        //   },
-        // }
+        "MATNO": PLX.con01,
+        "ProductName": PLX.con02,
+        "SPEC": {
+          "COLOR": PLX.con03,
+          "APPEARANCE": PLX.con04,
+          "TC": {
+            "HI": PLX.conMAX01,
+            "LOW": PLX.conMIN01,
+          },
+          "THOP": {
+            "HI": PLX.conMAX02,
+            "LOW": PLX.conMIN02,
+          },
+          "FHOP": {
+            "HI": PLX.conMAX03,
+            "LOW": PLX.conMIN03,
+          },
+          "FT": {
+            "HI": PLX.conMAX04,
+            "LOW": PLX.conMIN04,
+          },
+          "Viscosity": {
+            "HI": PLX.conMAX05,
+            "LOW": PLX.conMIN05,
+          },
+          "PaticleSize": {
+            "HI": PLX.conMAX06,
+            "LOW": PLX.conMIN06,
+          },
+          "NVC": {
+            "HI": PLX.conMAX07,
+            "LOW": PLX.conMIN07,
+          },
+        }
       },
     );
     List<dataset> output = [];

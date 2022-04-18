@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../data/model.dart';
+import '../../page/P3HYDROPHILIC/HydrophilicVar.dart';
 
 abstract class HydrophilicDataSetEvent {}
 
@@ -30,7 +31,7 @@ class HydrophilicDataSetBloc
   Future<void> _getdata(
       List<dataset> toAdd, Emitter<List<dataset>> emit) async {
     final response = await Dio().post(
-      server + "getHydrophilicmaster",
+      server + "gethydrophilicmaster",
       data: {},
     );
     List<dataset> output = [];
@@ -109,42 +110,50 @@ class HydrophilicDataSetBloc
   Future<void> _updata(List<dataset> toAdd, Emitter<List<dataset>> emit) async {
 //--------------------------- return
     final response = await Dio().post(
-      server + "upHydrophilicmaster",
+      server + "uphydrophilicmaster",
       data: {
-        // "MATNO": Hydrophilic.con01,
-        // "ProductName": Hydrophilic.con02,
-        // "SPEC": {
-        //   "COLOR": Hydrophilic.con03,
-        //   "APPEARANCE": Hydrophilic.con04,
-        //   "SG": {
-        //     "HI": Hydrophilic.conMAX01,
-        //     "LOW": Hydrophilic.conMIN01,
-        //   },
-        //   "FA": {
-        //     "HI": Hydrophilic.conMAX02,
-        //     "LOW": Hydrophilic.conMIN02,
-        //   },
-        //   "TA": {
-        //     "HI": Hydrophilic.conMAX03,
-        //     "LOW": Hydrophilic.conMIN03,
-        //   },
-        //   "T_Al": {
-        //     "HI": Hydrophilic.conMAX04,
-        //     "LOW": Hydrophilic.conMIN04,
-        //   },
-        //   "PH": {
-        //     "HI": Hydrophilic.conMAX05,
-        //     "LOW": Hydrophilic.conMIN05,
-        //   },
-        //   "NVC": {
-        //     "HI": Hydrophilic.conMAX06,
-        //     "LOW": Hydrophilic.conMIN06,
-        //   },
-        //   "PURITY": {
-        //     "HI": Hydrophilic.conMAX07,
-        //     "LOW": Hydrophilic.conMIN07,
-        //   },
-        // }
+        "MATNO": HYDROPHILIC.con01,
+        "ProductName": HYDROPHILIC.con02,
+        "SPEC": {
+          "COLOR": HYDROPHILIC.con03,
+          "APPEARANCE": HYDROPHILIC.con04,
+          "SG": {
+            "HI": HYDROPHILIC.conMAX01,
+            "LOW": HYDROPHILIC.conMIN01,
+          },
+          "FA": {
+            "HI": HYDROPHILIC.conMAX02,
+            "LOW": HYDROPHILIC.conMIN02,
+          },
+          "TA": {
+            "HI": HYDROPHILIC.conMAX03,
+            "LOW": HYDROPHILIC.conMIN03,
+          },
+          "PH": {
+            "HI": HYDROPHILIC.conMAX04,
+            "LOW": HYDROPHILIC.conMIN04,
+          },
+          "NVC": {
+            "HI": HYDROPHILIC.conMAX05,
+            "LOW": HYDROPHILIC.conMIN05,
+          },
+          "Brix": {
+            "HI": HYDROPHILIC.conMAX06,
+            "LOW": HYDROPHILIC.conMIN06,
+          },
+          "CR3": {
+            "HI": HYDROPHILIC.conMAX07,
+            "LOW": HYDROPHILIC.conMIN07,
+          },
+          "CECM": {
+            "HI": HYDROPHILIC.conMAX07,
+            "LOW": HYDROPHILIC.conMIN07,
+          },
+          "CE": {
+            "HI": HYDROPHILIC.conMAX07,
+            "LOW": HYDROPHILIC.conMIN07,
+          },
+        }
       },
     );
     List<dataset> output = [];

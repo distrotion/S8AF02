@@ -273,6 +273,7 @@ class _MyData extends DataTableSource {
                   HYDROPHILIC.conMIN05 = data.f14;
                   HYDROPHILIC.conMAX06 = data.f15;
                   HYDROPHILIC.conMIN06 = data.f16;
+
                   HYDROPHILICConsoleBox();
                   // print(data.f01);
                 },

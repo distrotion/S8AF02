@@ -153,7 +153,7 @@ void HYDROPHILICConsoleBox() {
                                       child: SizedBox(
                                         height: 40,
                                         // color: Colors.blue,
-                                        child: Center(child: Text("F.A.")),
+                                        child: Center(child: Text("T.A.")),
                                       ),
                                     ),
                                   ),
@@ -165,7 +165,7 @@ void HYDROPHILICConsoleBox() {
                                       child: SizedBox(
                                         height: 40,
                                         // color: Colors.blue,
-                                        child: Center(child: Text("T.A.")),
+                                        child: Center(child: Text("PH")),
                                       ),
                                     ),
                                   ),
@@ -189,18 +189,6 @@ void HYDROPHILICConsoleBox() {
                                       child: SizedBox(
                                         height: 40,
                                         // color: Colors.blue,
-                                        child: Center(child: Text("Ph")),
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 64,
-                                    width: 100,
-                                    child: Align(
-                                      alignment: Alignment.bottomCenter,
-                                      child: SizedBox(
-                                        height: 40,
-                                        // color: Colors.blue,
                                         child: Center(child: Text("%NVC")),
                                       ),
                                     ),
@@ -213,7 +201,43 @@ void HYDROPHILICConsoleBox() {
                                       child: SizedBox(
                                         height: 40,
                                         // color: Colors.blue,
-                                        child: Center(child: Text("Purity")),
+                                        child: Center(child: Text("Brix")),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 64,
+                                    width: 100,
+                                    child: Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: SizedBox(
+                                        height: 40,
+                                        // color: Colors.blue,
+                                        child: Center(child: Text("CR3+")),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 64,
+                                    width: 100,
+                                    child: Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: SizedBox(
+                                        height: 40,
+                                        // color: Colors.blue,
+                                        child: Center(child: Text("CECM")),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 64,
+                                    width: 100,
+                                    child: Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: SizedBox(
+                                        height: 40,
+                                        // color: Colors.blue,
+                                        child: Center(child: Text("CE")),
                                       ),
                                     ),
                                   ),
@@ -319,6 +343,34 @@ void HYDROPHILICConsoleBox() {
                                       HYDROPHILIC.conMIN07 = s;
                                     },
                                   ),
+                                  ComInputText(
+                                    isNumberOnly: true,
+                                    sLabel: "min",
+                                    height: 40,
+                                    width: 100,
+                                    isContr: HYDROPHILIC.iscon01,
+                                    fnContr: (input) {
+                                      HYDROPHILIC.iscon01 = input;
+                                    },
+                                    sValue: HYDROPHILIC.conMIN08,
+                                    returnfunc: (String s) {
+                                      HYDROPHILIC.conMIN08 = s;
+                                    },
+                                  ),
+                                  ComInputText(
+                                    isNumberOnly: true,
+                                    sLabel: "min",
+                                    height: 40,
+                                    width: 100,
+                                    isContr: HYDROPHILIC.iscon01,
+                                    fnContr: (input) {
+                                      HYDROPHILIC.iscon01 = input;
+                                    },
+                                    sValue: HYDROPHILIC.conMIN09,
+                                    returnfunc: (String s) {
+                                      HYDROPHILIC.conMIN09 = s;
+                                    },
+                                  ),
                                 ],
                               ),
                               Column(
@@ -419,6 +471,34 @@ void HYDROPHILICConsoleBox() {
                                     sValue: HYDROPHILIC.conMAX07,
                                     returnfunc: (String s) {
                                       HYDROPHILIC.conMAX07 = s;
+                                    },
+                                  ),
+                                  ComInputText(
+                                    isNumberOnly: true,
+                                    sLabel: "max",
+                                    height: 40,
+                                    width: 100,
+                                    isContr: HYDROPHILIC.iscon01,
+                                    fnContr: (input) {
+                                      HYDROPHILIC.iscon01 = input;
+                                    },
+                                    sValue: HYDROPHILIC.conMAX08,
+                                    returnfunc: (String s) {
+                                      HYDROPHILIC.conMAX08 = s;
+                                    },
+                                  ),
+                                  ComInputText(
+                                    isNumberOnly: true,
+                                    sLabel: "max",
+                                    height: 40,
+                                    width: 100,
+                                    isContr: HYDROPHILIC.iscon01,
+                                    fnContr: (input) {
+                                      HYDROPHILIC.iscon01 = input;
+                                    },
+                                    sValue: HYDROPHILIC.conMAX09,
+                                    returnfunc: (String s) {
+                                      HYDROPHILIC.conMAX09 = s;
                                     },
                                   ),
                                 ],

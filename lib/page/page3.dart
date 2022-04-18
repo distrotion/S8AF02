@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../bloc/BlocEvent/03-HydroPhilic.dart';
+import '../data/model.dart';
+import 'P3HYDROPHILIC/HydrophilicMain.dart';
 import 'page0.dart';
 import '../data/global.dart';
 import 'dart:async';
@@ -8,55 +12,35 @@ class Page3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Page3Body();
+    return Page3BlocTableBody();
+  }
+}
+
+class Page3BlocTableBody extends StatelessWidget {
+  /// {@macro counter_page}
+  const Page3BlocTableBody({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+        create: (_) => HydrophilicDataSetBloc(),
+        child: BlocBuilder<HydrophilicDataSetBloc, List<dataset>>(
+          builder: (context, data) {
+            return Page3Body(
+              data: data,
+            );
+          },
+        ));
   }
 }
 
 class Page3Body extends StatelessWidget {
-  const Page3Body({Key? key}) : super(key: key);
+  Page3Body({Key? key, this.data}) : super(key: key);
+  List<dataset>? data;
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        height: 100,
-        width: 100,
-        color: Colors.green,
-        child: const Text("PAGE 3"),
-      ),
-    );
-  }
-}
-
-// Timer timer = new Timer(new Duration(seconds: 3), () {
-//   debugPrint("Print after 3 seconds");
-// });
-
-class timmerTEST extends StatefulWidget {
-  const timmerTEST({Key? key}) : super(key: key);
-
-  @override
-  State<timmerTEST> createState() => _timmerTESTState();
-}
-
-int tic = 0;
-
-class _timmerTESTState extends State<timmerTEST> {
-  @override
-  Widget build(BuildContext context) {
-    // Timer.periodic(const Duration(seconds: 3), (timer) {
-    //   tic++;
-    //   print(tic);
-    //   // setState(() {
-    //   //   // debugPrint(timer.tick.toString());
-    //   // });
-    // });
-    return Center(
-      child: Container(
-        height: 100,
-        width: 100,
-        color: Colors.green,
-        child: Text('${tic}'),
-      ),
+    return HydrophilicMain(
+      data: data,
     );
   }
 }

@@ -12,6 +12,8 @@ class HYDROPHILIC {
   static String conMIN05 = '';
   static String conMIN06 = '';
   static String conMIN07 = '';
+  static String conMIN08 = '';
+  static String conMIN09 = '';
   static String conMAX01 = '';
   static String conMAX02 = '';
   static String conMAX03 = '';
@@ -19,4 +21,6 @@ class HYDROPHILIC {
   static String conMAX05 = '';
   static String conMAX06 = '';
   static String conMAX07 = '';
+  static String conMAX08 = '';
+  static String conMAX09 = '';
 }

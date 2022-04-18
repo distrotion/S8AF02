@@ -124,12 +124,14 @@ class _CoilCoatingDataTableState extends State<CoilCoatingDataTable> {
                               COILCOATING.conMAX04 = '';
                               COILCOATING.conMAX05 = '';
                               COILCOATING.conMAX06 = '';
+                              COILCOATING.conMAX07 = '';
                               COILCOATING.conMIN01 = '';
                               COILCOATING.conMIN02 = '';
                               COILCOATING.conMIN03 = '';
                               COILCOATING.conMIN04 = '';
                               COILCOATING.conMIN05 = '';
                               COILCOATING.conMIN06 = '';
+                              COILCOATING.conMIN07 = '';
                               COILCOATINGConsoleBox();
                             },
                             // style: ButtonStyle(
@@ -273,6 +275,8 @@ class _MyData extends DataTableSource {
                   COILCOATING.conMIN05 = data.f14;
                   COILCOATING.conMAX06 = data.f15;
                   COILCOATING.conMIN06 = data.f16;
+                  COILCOATING.conMAX07 = data.f17;
+                  COILCOATING.conMIN07 = data.f17;
                   COILCOATINGConsoleBox();
                   // print(data.f01);
                 },

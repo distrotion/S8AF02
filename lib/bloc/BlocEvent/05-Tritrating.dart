@@ -2,24 +2,25 @@ import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../data/model.dart';
+import '../../page/P5TRITRATING/TRITRATINGVar.dart';
 
-abstract class TritratingDataSetEvent {}
+abstract class TRITRATINGDataSetEvent {}
 
 String server = 'http://127.0.0.1:9210/';
 
-class GetDataPressed extends TritratingDataSetEvent {}
+class GetDataPressed extends TRITRATINGDataSetEvent {}
 
-class UpdateDataPressed extends TritratingDataSetEvent {}
+class UpdateDataPressed extends TRITRATINGDataSetEvent {}
 
-class CounterValue extends TritratingDataSetBloc {
+class CounterValue extends TRITRATINGDataSetBloc {
   final int value;
   CounterValue(this.value);
 }
 
-class TritratingDataSetBloc
-    extends Bloc<TritratingDataSetEvent, List<dataset>> {
+class TRITRATINGDataSetBloc
+    extends Bloc<TRITRATINGDataSetEvent, List<dataset>> {
   /// {@macro counter_bloc}
-  TritratingDataSetBloc() : super(<dataset>[]) {
+  TRITRATINGDataSetBloc() : super(<dataset>[]) {
     on<GetDataPressed>((event, emit) {
       return _getdata([], emit);
     });
@@ -30,7 +31,7 @@ class TritratingDataSetBloc
   Future<void> _getdata(
       List<dataset> toAdd, Emitter<List<dataset>> emit) async {
     final response = await Dio().post(
-      server + "getTritratingmaster",
+      server + "gettritratingmaster",
       data: {},
     );
     List<dataset> output = [];
@@ -91,42 +92,38 @@ class TritratingDataSetBloc
   Future<void> _updata(List<dataset> toAdd, Emitter<List<dataset>> emit) async {
 //--------------------------- return
     final response = await Dio().post(
-      server + "upTritratingmaster",
+      server + "uptritratingmaster",
       data: {
-        // "MATNO": Tritrating.con01,
-        // "ProductName": Tritrating.con02,
-        // "SPEC": {
-        //   "COLOR": Tritrating.con03,
-        //   "APPEARANCE": Tritrating.con04,
-        //   "SG": {
-        //     "HI": Tritrating.conMAX01,
-        //     "LOW": Tritrating.conMIN01,
-        //   },
-        //   "FA": {
-        //     "HI": Tritrating.conMAX02,
-        //     "LOW": Tritrating.conMIN02,
-        //   },
-        //   "TA": {
-        //     "HI": Tritrating.conMAX03,
-        //     "LOW": Tritrating.conMIN03,
-        //   },
-        //   "T_Al": {
-        //     "HI": Tritrating.conMAX04,
-        //     "LOW": Tritrating.conMIN04,
-        //   },
-        //   "PH": {
-        //     "HI": Tritrating.conMAX05,
-        //     "LOW": Tritrating.conMIN05,
-        //   },
-        //   "NVC": {
-        //     "HI": Tritrating.conMAX06,
-        //     "LOW": Tritrating.conMIN06,
-        //   },
-        //   "PURITY": {
-        //     "HI": Tritrating.conMAX07,
-        //     "LOW": Tritrating.conMIN07,
-        //   },
-        // }
+        "MATNO": TRITRATING.con01,
+        "ProductName": TRITRATING.con02,
+        "SPEC": {
+          "COLOR": TRITRATING.con03,
+          "APPEARANCE": TRITRATING.con04,
+          "SG": {
+            "HI": TRITRATING.conMAX01,
+            "LOW": TRITRATING.conMIN01,
+          },
+          "TA": {
+            "HI": TRITRATING.conMAX02,
+            "LOW": TRITRATING.conMIN02,
+          },
+          "T_Al": {
+            "HI": TRITRATING.conMAX03,
+            "LOW": TRITRATING.conMIN03,
+          },
+          "PH": {
+            "HI": TRITRATING.conMAX04,
+            "LOW": TRITRATING.conMIN04,
+          },
+          "FACTOR": {
+            "HI": TRITRATING.conMAX05,
+            "LOW": TRITRATING.conMIN05,
+          },
+          "ACO": {
+            "HI": TRITRATING.conMAX06,
+            "LOW": TRITRATING.conMIN06,
+          },
+        }
       },
     );
     List<dataset> output = [];

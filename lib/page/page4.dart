@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../bloc/BlocEvent/04-PLX.dart';
+import '../data/model.dart';
+import 'P4PLX/PLXMain.dart';
 import 'page0.dart';
 import '../data/global.dart';
 
@@ -7,22 +11,36 @@ class Page4 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Page4Body();
+    return Page4BlocTableBody();
+  }
+}
+
+class Page4BlocTableBody extends StatelessWidget {
+  /// {@macro counter_page}
+  const Page4BlocTableBody({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+        create: (_) => PLXDataSetBloc(),
+        child: BlocBuilder<PLXDataSetBloc, List<dataset>>(
+          builder: (context, data) {
+            return Page4Body(
+              data: data,
+            );
+          },
+        ));
   }
 }
 
 class Page4Body extends StatelessWidget {
-  const Page4Body({Key? key}) : super(key: key);
+  Page4Body({Key? key, this.data}) : super(key: key);
+  List<dataset>? data;
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        height: 100,
-        width: 100,
-        color: Colors.red,
-        child: const Text("PAGE 4"),
-      ),
+    return PLXMain(
+      data: data,
     );
   }
 }
