@@ -92,7 +92,7 @@ class Logo1 extends StatelessWidget {
       child: Container(
         color: Color(0xff0b1327),
         child: Text(
-          "Thaiparker",
+          "TPK SOI8 MANAGER SITE",
           style: TextStyle(
             fontFamily: 'Mitr',
             color: Colors.white,

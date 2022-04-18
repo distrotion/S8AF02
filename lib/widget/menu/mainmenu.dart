@@ -2,15 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../bloc/BlocEvent/LoginEvent.dart';
+import '../../bloc/Cubit/Rebuild.dart';
 import '../../mainBody.dart';
 import '../../page/page1.dart';
 import '../../page/page2.dart';
 import '../../page/page3.dart';
 import '../../page/page4.dart';
 import '../../page/page5.dart';
+import '../../page/page6.dart';
 import 'sub_widget.dart';
 
 late BuildContext MenuContext;
+bool menupop = false;
 
 class MainMenu extends StatefulWidget {
   MainMenu({Key? key}) : super(key: key);
@@ -41,9 +44,13 @@ class _MainMenuState extends State<MainMenu> {
   }
 }
 
-class Data_Menu_mainmenu extends StatelessWidget {
-  //const Data_Menu_mainmenu({Key? key},this.pagein) : super(key: key);
+class Data_Menu_mainmenu extends StatefulWidget {
+  @override
+  State<Data_Menu_mainmenu> createState() => _Data_Menu_mainmenuState();
+}
 
+class _Data_Menu_mainmenuState extends State<Data_Menu_mainmenu> {
+  //const Data_Menu_mainmenu({Key? key},this.pagein) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -73,30 +80,74 @@ class Data_Menu_mainmenu extends StatelessWidget {
                     ),
                   ),
                 ))),
-        menu_normal(
-          name: "Page1",
-          page: Page1(),
-          Lv: 1,
+        InkWell(
+          onTap: () {
+            setState(() {
+              if (menupop) {
+                menupop = false;
+              } else {
+                menupop = true;
+              }
+            });
+          },
+          child: const SizedBox(
+            height: 50,
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "   MASTER MENU",
+                style: TextStyle(
+                  fontFamily: 'Mitr',
+                  color: Colors.white,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w300,
+                  fontStyle: FontStyle.normal,
+                  letterSpacing: 0,
+                ),
+              ),
+            ),
+          ),
         ),
+        if (menupop) ...[
+          Container(
+            height: 200,
+            child: Column(
+              children: [
+                menu_sub(
+                  name: "Premix",
+                  page: Page1(),
+                  Lv: 1,
+                ),
+                menu_sub(
+                  name: "Coil Coating",
+                  page: Page2(),
+                  Lv: 1,
+                ),
+                menu_sub(
+                  name: "Hydrophilic",
+                  page: Page3(),
+                  Lv: 1,
+                ),
+                menu_sub(
+                  name: "PL-X",
+                  page: Page4(),
+                  Lv: 1,
+                ),
+                menu_sub(
+                  name: "Tritrating",
+                  page: Page5(),
+                  Lv: 1,
+                ),
+              ],
+            ),
+          )
+        ] else ...[
+          SizedBox(),
+        ],
         menu_normal(
-          name: "Page2",
-          page: Page2(),
+          name: "APPROVE TO SCADA",
+          page: Page6(),
           Lv: 1,
-        ),
-        menu_normal(
-          name: "Page3",
-          page: Page3(),
-          Lv: 1,
-        ),
-        menu_normal(
-          name: "Page4",
-          page: Page4(),
-          Lv: 1,
-        ),
-        menu_normal(
-          name: "Page5",
-          page: Page5(),
-          Lv: 5,
         ),
         menu_logout(
           name: "Logout",
