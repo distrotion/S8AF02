@@ -10,6 +10,7 @@ import '../../page/page3.dart';
 import '../../page/page4.dart';
 import '../../page/page5.dart';
 import '../../page/page6.dart';
+import '../../page/page7.dart';
 import 'sub_widget.dart';
 
 late BuildContext MenuContext;
@@ -147,6 +148,11 @@ class _Data_Menu_mainmenuState extends State<Data_Menu_mainmenu> {
         menu_normal(
           name: "APPROVE TO SCADA",
           page: Page6(),
+          Lv: 1,
+        ),
+        menu_normal(
+          name: "New Order",
+          page: Page7(),
           Lv: 1,
         ),
         menu_logout(

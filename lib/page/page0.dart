@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../widget/common/Advancedropdown.dart';
+import '../widget/soi8card/premix/premixmain.dart';
 
 class Page0 extends StatelessWidget {
   const Page0({Key? key}) : super(key: key);
@@ -17,46 +17,22 @@ class Page0Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Container(
-          height: 100,
-          width: 200,
-          color: Colors.orange,
-          child: const Center(
-              child: Text("initial Page \nor do something wrong"))),
+      child: ProgressBody(),
     );
   }
 }
 
-class testbutton extends StatefulWidget {
-  testbutton({Key? key}) : super(key: key);
+class ProgressBody extends StatelessWidget {
+  const ProgressBody({Key? key}) : super(key: key);
 
-  @override
-  State<testbutton> createState() => _testbuttonState();
-}
-
-class _testbuttonState extends State<testbutton> {
-  String test01 = '1';
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: SizedBox(
-        height: 40,
-        child: AdvanceDropDown(
-          listdropdown: const [
-            MapEntry("", ""),
-            MapEntry("ONE", "1"),
-            MapEntry("TWO", "2"),
-            MapEntry("THREE", "3"),
-          ],
-          onChangeinside: (d) {
-            setState(() {
-              test01 = d;
-              print(test01);
-            });
-          },
-          value: test01,
-          height: 40,
-          width: 100,
+    return Container(
+      height: 2000,
+      color: Colors.black,
+      child: SingleChildScrollView(
+        child: Column(
+          children: [PREMIXcardBODY()],
         ),
       ),
     );
