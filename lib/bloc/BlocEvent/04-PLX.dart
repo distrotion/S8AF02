@@ -48,46 +48,46 @@ class PLXDataSetBloc extends Bloc<PLXDataSetEvent, List<dataset>> {
           f04: databuff[i]['SPEC']['APPEARANCE'] ?? '',
           f05: databuff[i]['SPEC']['TC'] == null
               ? ''
-              : databuff[i]['SPEC']['TC']['HI'],
+              : databuff[i]['SPEC']['TC']['HI'].toString(),
           f06: databuff[i]['SPEC']['TC'] == null
               ? ''
-              : databuff[i]['SPEC']['TC']['LOW'],
+              : databuff[i]['SPEC']['TC']['LOW'].toString(),
           f07: databuff[i]['SPEC']['THOP'] == null
               ? ''
-              : databuff[i]['SPEC']['THOP']['HI'],
+              : databuff[i]['SPEC']['THOP']['HI'].toString(),
           f08: databuff[i]['SPEC']['THOP'] == null
               ? ''
-              : databuff[i]['SPEC']['THOP']['LOW'],
+              : databuff[i]['SPEC']['THOP']['LOW'].toString(),
           f09: databuff[i]['SPEC']['FHOP'] == null
               ? ''
-              : databuff[i]['SPEC']['FHOP']['HI'],
+              : databuff[i]['SPEC']['FHOP']['HI'].toString(),
           f10: databuff[i]['SPEC']['FHOP'] == null
               ? ''
-              : databuff[i]['SPEC']['FHOP']['LOW'],
+              : databuff[i]['SPEC']['FHOP']['LOW'].toString(),
           f11: databuff[i]['SPEC']['FT'] == null
               ? ''
-              : databuff[i]['SPEC']['FT']['HI'],
+              : databuff[i]['SPEC']['FT']['HI'].toString(),
           f12: databuff[i]['SPEC']['FT'] == null
               ? ''
-              : databuff[i]['SPEC']['FT']['LOW'],
+              : databuff[i]['SPEC']['FT']['LOW'].toString(),
           f13: databuff[i]['SPEC']['Viscosity'] == null
               ? ''
-              : databuff[i]['SPEC']['Viscosity']['HI'],
+              : databuff[i]['SPEC']['Viscosity']['HI'].toString(),
           f14: databuff[i]['SPEC']['Viscosity'] == null
               ? ''
-              : databuff[i]['SPEC']['Viscosity']['LOW'],
+              : databuff[i]['SPEC']['Viscosity']['LOW'].toString(),
           f15: databuff[i]['SPEC']['PaticleSize'] == null
               ? ''
-              : databuff[i]['SPEC']['PaticleSize']['HI'],
+              : databuff[i]['SPEC']['PaticleSize']['HI'].toString(),
           f16: databuff[i]['SPEC']['PaticleSize'] == null
               ? ''
-              : databuff[i]['SPEC']['PaticleSize']['LOW'],
+              : databuff[i]['SPEC']['PaticleSize']['LOW'].toString(),
           f17: databuff[i]['SPEC']['NVC'] == null
               ? ''
-              : databuff[i]['SPEC']['NVC']['HI'],
+              : databuff[i]['SPEC']['NVC']['HI'].toString(),
           f18: databuff[i]['SPEC']['NVC'] == null
               ? ''
-              : databuff[i]['SPEC']['NVC']['LOW'],
+              : databuff[i]['SPEC']['NVC']['LOW'].toString(),
         ));
       }
     } else {}
@@ -150,46 +150,46 @@ class PLXDataSetBloc extends Bloc<PLXDataSetEvent, List<dataset>> {
           f04: databuff[i]['SPEC']['APPEARANCE'] ?? '',
           f05: databuff[i]['SPEC']['TC'] == null
               ? ''
-              : databuff[i]['SPEC']['TC']['HI'],
+              : databuff[i]['SPEC']['TC']['HI'].toString(),
           f06: databuff[i]['SPEC']['TC'] == null
               ? ''
-              : databuff[i]['SPEC']['TC']['LOW'],
+              : databuff[i]['SPEC']['TC']['LOW'].toString(),
           f07: databuff[i]['SPEC']['THOP'] == null
               ? ''
-              : databuff[i]['SPEC']['THOP']['HI'],
+              : databuff[i]['SPEC']['THOP']['HI'].toString(),
           f08: databuff[i]['SPEC']['THOP'] == null
               ? ''
-              : databuff[i]['SPEC']['THOP']['LOW'],
+              : databuff[i]['SPEC']['THOP']['LOW'].toString(),
           f09: databuff[i]['SPEC']['FHOP'] == null
               ? ''
-              : databuff[i]['SPEC']['FHOP']['HI'],
+              : databuff[i]['SPEC']['FHOP']['HI'].toString(),
           f10: databuff[i]['SPEC']['FHOP'] == null
               ? ''
-              : databuff[i]['SPEC']['FHOP']['LOW'],
+              : databuff[i]['SPEC']['FHOP']['LOW'].toString(),
           f11: databuff[i]['SPEC']['FT'] == null
               ? ''
-              : databuff[i]['SPEC']['FT']['HI'],
+              : databuff[i]['SPEC']['FT']['HI'].toString(),
           f12: databuff[i]['SPEC']['FT'] == null
               ? ''
-              : databuff[i]['SPEC']['FT']['LOW'],
+              : databuff[i]['SPEC']['FT']['LOW'].toString(),
           f13: databuff[i]['SPEC']['Viscosity'] == null
               ? ''
-              : databuff[i]['SPEC']['Viscosity']['HI'],
+              : databuff[i]['SPEC']['Viscosity']['HI'].toString(),
           f14: databuff[i]['SPEC']['Viscosity'] == null
               ? ''
-              : databuff[i]['SPEC']['Viscosity']['LOW'],
+              : databuff[i]['SPEC']['Viscosity']['LOW'].toString(),
           f15: databuff[i]['SPEC']['PaticleSize'] == null
               ? ''
-              : databuff[i]['SPEC']['PaticleSize']['HI'],
+              : databuff[i]['SPEC']['PaticleSize']['HI'].toString(),
           f16: databuff[i]['SPEC']['PaticleSize'] == null
               ? ''
-              : databuff[i]['SPEC']['PaticleSize']['LOW'],
+              : databuff[i]['SPEC']['PaticleSize']['LOW'].toString(),
           f17: databuff[i]['SPEC']['NVC'] == null
               ? ''
-              : databuff[i]['SPEC']['NVC']['HI'],
+              : databuff[i]['SPEC']['NVC']['HI'].toString(),
           f18: databuff[i]['SPEC']['NVC'] == null
               ? ''
-              : databuff[i]['SPEC']['NVC']['LOW'],
+              : databuff[i]['SPEC']['NVC']['LOW'].toString(),
         ));
       }
     } else {}

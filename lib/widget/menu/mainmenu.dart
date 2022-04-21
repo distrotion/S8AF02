@@ -110,8 +110,8 @@ class _Data_Menu_mainmenuState extends State<Data_Menu_mainmenu> {
           ),
         ),
         if (menupop) ...[
-          Container(
-            height: 200,
+          SizedBox(
+            height: 280,
             child: Column(
               children: [
                 menu_sub(
@@ -139,11 +139,21 @@ class _Data_Menu_mainmenuState extends State<Data_Menu_mainmenu> {
                   page: Page5(),
                   Lv: 1,
                 ),
+                menu_sub(
+                  name: "Powder",
+                  page: Page6(),
+                  Lv: 1,
+                ),
+                menu_sub(
+                  name: "Liquid",
+                  page: Page7(),
+                  Lv: 1,
+                ),
               ],
             ),
           )
         ] else ...[
-          SizedBox(),
+          const SizedBox(),
         ],
         menu_normal(
           name: "APPROVE TO SCADA",

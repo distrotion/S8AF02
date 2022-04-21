@@ -31,6 +31,26 @@ class dataset {
     this.f28 = '',
     this.f29 = '',
     this.f30 = '',
+    this.f31 = '',
+    this.f32 = '',
+    this.f33 = '',
+    this.f34 = '',
+    this.f35 = '',
+    this.f36 = '',
+    this.f37 = '',
+    this.f38 = '',
+    this.f39 = '',
+    this.f40 = '',
+    this.f41 = '',
+    this.f42 = '',
+    this.f43 = '',
+    this.f44 = '',
+    this.f45 = '',
+    this.f46 = '',
+    this.f47 = '',
+    this.f48 = '',
+    this.f49 = '',
+    this.f50 = '',
   });
   int id;
   String f01;
@@ -63,6 +83,26 @@ class dataset {
   String f28;
   String f29;
   String f30;
+  String f31;
+  String f32;
+  String f33;
+  String f34;
+  String f35;
+  String f36;
+  String f37;
+  String f38;
+  String f39;
+  String f40;
+  String f41;
+  String f42;
+  String f43;
+  String f44;
+  String f45;
+  String f46;
+  String f47;
+  String f48;
+  String f49;
+  String f50;
 
   bool selected = false;
 }

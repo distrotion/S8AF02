@@ -49,40 +49,40 @@ class TRITRATINGDataSetBloc
           f04: databuff[i]['SPEC']['APPEARANCE'] ?? '',
           f05: databuff[i]['SPEC']['SG'] == null
               ? ''
-              : databuff[i]['SPEC']['SG']['HI'],
+              : databuff[i]['SPEC']['SG']['HI'].toString(),
           f06: databuff[i]['SPEC']['SG'] == null
               ? ''
-              : databuff[i]['SPEC']['SG']['LOW'],
+              : databuff[i]['SPEC']['SG']['LOW'].toString(),
           f07: databuff[i]['SPEC']['TA'] == null
               ? ''
-              : databuff[i]['SPEC']['TA']['HI'],
+              : databuff[i]['SPEC']['TA']['HI'].toString(),
           f08: databuff[i]['SPEC']['TA'] == null
               ? ''
-              : databuff[i]['SPEC']['TA']['LOW'],
+              : databuff[i]['SPEC']['TA']['LOW'].toString(),
           f09: databuff[i]['SPEC']['T_Al'] == null
               ? ''
-              : databuff[i]['SPEC']['T_Al']['HI'],
+              : databuff[i]['SPEC']['T_Al']['HI'].toString(),
           f10: databuff[i]['SPEC']['T_Al'] == null
               ? ''
-              : databuff[i]['SPEC']['T_Al']['LOW'],
+              : databuff[i]['SPEC']['T_Al']['LOW'].toString(),
           f11: databuff[i]['SPEC']['PH'] == null
               ? ''
-              : databuff[i]['SPEC']['PH']['HI'],
+              : databuff[i]['SPEC']['PH']['HI'].toString(),
           f12: databuff[i]['SPEC']['PH'] == null
               ? ''
-              : databuff[i]['SPEC']['PH']['LOW'],
+              : databuff[i]['SPEC']['PH']['LOW'].toString(),
           f13: databuff[i]['SPEC']['FACTOR'] == null
               ? ''
-              : databuff[i]['SPEC']['FACTOR']['HI'],
+              : databuff[i]['SPEC']['FACTOR']['HI'].toString(),
           f14: databuff[i]['SPEC']['FACTOR'] == null
               ? ''
-              : databuff[i]['SPEC']['FACTOR']['LOW'],
+              : databuff[i]['SPEC']['FACTOR']['LOW'].toString(),
           f15: databuff[i]['SPEC']['ACO'] == null
               ? ''
-              : databuff[i]['SPEC']['ACO']['HI'],
+              : databuff[i]['SPEC']['ACO']['HI'].toString(),
           f16: databuff[i]['SPEC']['ACO'] == null
               ? ''
-              : databuff[i]['SPEC']['ACO']['LOW'],
+              : databuff[i]['SPEC']['ACO']['LOW'].toString(),
         ));
       }
     } else {}
@@ -141,40 +141,40 @@ class TRITRATINGDataSetBloc
           f04: databuff[i]['SPEC']['APPEARANCE'] ?? '',
           f05: databuff[i]['SPEC']['SG'] == null
               ? ''
-              : databuff[i]['SPEC']['SG']['HI'],
+              : databuff[i]['SPEC']['SG']['HI'].toString(),
           f06: databuff[i]['SPEC']['SG'] == null
               ? ''
-              : databuff[i]['SPEC']['SG']['LOW'],
+              : databuff[i]['SPEC']['SG']['LOW'].toString(),
           f07: databuff[i]['SPEC']['TA'] == null
               ? ''
-              : databuff[i]['SPEC']['TA']['HI'],
+              : databuff[i]['SPEC']['TA']['HI'].toString(),
           f08: databuff[i]['SPEC']['TA'] == null
               ? ''
-              : databuff[i]['SPEC']['TA']['LOW'],
+              : databuff[i]['SPEC']['TA']['LOW'].toString(),
           f09: databuff[i]['SPEC']['T_Al'] == null
               ? ''
-              : databuff[i]['SPEC']['T_Al']['HI'],
+              : databuff[i]['SPEC']['T_Al']['HI'].toString(),
           f10: databuff[i]['SPEC']['T_Al'] == null
               ? ''
-              : databuff[i]['SPEC']['T_Al']['LOW'],
+              : databuff[i]['SPEC']['T_Al']['LOW'].toString(),
           f11: databuff[i]['SPEC']['PH'] == null
               ? ''
-              : databuff[i]['SPEC']['PH']['HI'],
+              : databuff[i]['SPEC']['PH']['HI'].toString(),
           f12: databuff[i]['SPEC']['PH'] == null
               ? ''
-              : databuff[i]['SPEC']['PH']['LOW'],
+              : databuff[i]['SPEC']['PH']['LOW'].toString(),
           f13: databuff[i]['SPEC']['FACTOR'] == null
               ? ''
-              : databuff[i]['SPEC']['FACTOR']['HI'],
+              : databuff[i]['SPEC']['FACTOR']['HI'].toString(),
           f14: databuff[i]['SPEC']['FACTOR'] == null
               ? ''
-              : databuff[i]['SPEC']['FACTOR']['LOW'],
+              : databuff[i]['SPEC']['FACTOR']['LOW'].toString(),
           f15: databuff[i]['SPEC']['ACO'] == null
               ? ''
-              : databuff[i]['SPEC']['ACO']['HI'],
+              : databuff[i]['SPEC']['ACO']['HI'].toString(),
           f16: databuff[i]['SPEC']['ACO'] == null
               ? ''
-              : databuff[i]['SPEC']['ACO']['LOW'],
+              : databuff[i]['SPEC']['ACO']['LOW'].toString(),
         ));
       }
     } else {}

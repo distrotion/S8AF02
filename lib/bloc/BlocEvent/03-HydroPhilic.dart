@@ -49,58 +49,58 @@ class HydrophilicDataSetBloc
           f04: databuff[i]['SPEC']['APPEARANCE'] ?? '',
           f05: databuff[i]['SPEC']['SG'] == null
               ? ''
-              : databuff[i]['SPEC']['SG']['HI'],
+              : databuff[i]['SPEC']['SG']['HI'].toString(),
           f06: databuff[i]['SPEC']['SG'] == null
               ? ''
-              : databuff[i]['SPEC']['SG']['LOW'],
+              : databuff[i]['SPEC']['SG']['LOW'].toString(),
           f07: databuff[i]['SPEC']['FA'] == null
               ? ''
-              : databuff[i]['SPEC']['FA']['HI'],
+              : databuff[i]['SPEC']['FA']['HI'].toString(),
           f08: databuff[i]['SPEC']['FA'] == null
               ? ''
-              : databuff[i]['SPEC']['FA']['LOW'],
+              : databuff[i]['SPEC']['FA']['LOW'].toString(),
           f09: databuff[i]['SPEC']['TA'] == null
               ? ''
-              : databuff[i]['SPEC']['TA']['HI'],
+              : databuff[i]['SPEC']['TA']['HI'].toString(),
           f10: databuff[i]['SPEC']['TA'] == null
               ? ''
-              : databuff[i]['SPEC']['TA']['LOW'],
+              : databuff[i]['SPEC']['TA']['LOW'].toString(),
           f11: databuff[i]['SPEC']['PH'] == null
               ? ''
-              : databuff[i]['SPEC']['PH']['HI'],
+              : databuff[i]['SPEC']['PH']['HI'].toString(),
           f12: databuff[i]['SPEC']['PH'] == null
               ? ''
-              : databuff[i]['SPEC']['PH']['LOW'],
+              : databuff[i]['SPEC']['PH']['LOW'].toString(),
           f13: databuff[i]['SPEC']['NVC'] == null
               ? ''
-              : databuff[i]['SPEC']['NVC']['HI'],
+              : databuff[i]['SPEC']['NVC']['HI'].toString(),
           f14: databuff[i]['SPEC']['NVC'] == null
               ? ''
-              : databuff[i]['SPEC']['NVC']['LOW'],
+              : databuff[i]['SPEC']['NVC']['LOW'].toString(),
           f15: databuff[i]['SPEC']['Brix'] == null
               ? ''
-              : databuff[i]['SPEC']['Brix']['HI'],
+              : databuff[i]['SPEC']['Brix']['HI'].toString(),
           f16: databuff[i]['SPEC']['Brix'] == null
               ? ''
-              : databuff[i]['SPEC']['Brix']['LOW'],
+              : databuff[i]['SPEC']['Brix']['LOW'].toString(),
           f17: databuff[i]['SPEC']['CR3'] == null
               ? ''
-              : databuff[i]['SPEC']['CR3']['HI'],
+              : databuff[i]['SPEC']['CR3']['HI'].toString(),
           f18: databuff[i]['SPEC']['CR3'] == null
               ? ''
-              : databuff[i]['SPEC']['CR3']['LOW'],
+              : databuff[i]['SPEC']['CR3']['LOW'].toString(),
           f19: databuff[i]['SPEC']['CECM'] == null
               ? ''
-              : databuff[i]['SPEC']['CECM']['HI'],
+              : databuff[i]['SPEC']['CECM']['HI'].toString(),
           f20: databuff[i]['SPEC']['CECM'] == null
               ? ''
-              : databuff[i]['SPEC']['CECM']['LOW'],
+              : databuff[i]['SPEC']['CECM']['LOW'].toString(),
           f21: databuff[i]['SPEC']['CE'] == null
               ? ''
-              : databuff[i]['SPEC']['CE']['HI'],
+              : databuff[i]['SPEC']['CE']['HI'].toString(),
           f22: databuff[i]['SPEC']['CE'] == null
               ? ''
-              : databuff[i]['SPEC']['CE']['LOW'],
+              : databuff[i]['SPEC']['CE']['LOW'].toString(),
         ));
       }
     } else {}
@@ -171,58 +171,58 @@ class HydrophilicDataSetBloc
           f04: databuff[i]['SPEC']['APPEARANCE'] ?? '',
           f05: databuff[i]['SPEC']['SG'] == null
               ? ''
-              : databuff[i]['SPEC']['SG']['HI'],
+              : databuff[i]['SPEC']['SG']['HI'].toString(),
           f06: databuff[i]['SPEC']['SG'] == null
               ? ''
-              : databuff[i]['SPEC']['SG']['LOW'],
+              : databuff[i]['SPEC']['SG']['LOW'].toString(),
           f07: databuff[i]['SPEC']['FA'] == null
               ? ''
-              : databuff[i]['SPEC']['FA']['HI'],
+              : databuff[i]['SPEC']['FA']['HI'].toString(),
           f08: databuff[i]['SPEC']['FA'] == null
               ? ''
-              : databuff[i]['SPEC']['FA']['LOW'],
+              : databuff[i]['SPEC']['FA']['LOW'].toString(),
           f09: databuff[i]['SPEC']['TA'] == null
               ? ''
-              : databuff[i]['SPEC']['TA']['HI'],
+              : databuff[i]['SPEC']['TA']['HI'].toString(),
           f10: databuff[i]['SPEC']['TA'] == null
               ? ''
-              : databuff[i]['SPEC']['TA']['LOW'],
+              : databuff[i]['SPEC']['TA']['LOW'].toString(),
           f11: databuff[i]['SPEC']['PH'] == null
               ? ''
-              : databuff[i]['SPEC']['PH']['HI'],
+              : databuff[i]['SPEC']['PH']['HI'].toString(),
           f12: databuff[i]['SPEC']['PH'] == null
               ? ''
-              : databuff[i]['SPEC']['PH']['LOW'],
+              : databuff[i]['SPEC']['PH']['LOW'].toString(),
           f13: databuff[i]['SPEC']['NVC'] == null
               ? ''
-              : databuff[i]['SPEC']['NVC']['HI'],
+              : databuff[i]['SPEC']['NVC']['HI'].toString(),
           f14: databuff[i]['SPEC']['NVC'] == null
               ? ''
-              : databuff[i]['SPEC']['NVC']['LOW'],
+              : databuff[i]['SPEC']['NVC']['LOW'].toString(),
           f15: databuff[i]['SPEC']['Brix'] == null
               ? ''
-              : databuff[i]['SPEC']['Brix']['HI'],
+              : databuff[i]['SPEC']['Brix']['HI'].toString(),
           f16: databuff[i]['SPEC']['Brix'] == null
               ? ''
-              : databuff[i]['SPEC']['Brix']['LOW'],
+              : databuff[i]['SPEC']['Brix']['LOW'].toString(),
           f17: databuff[i]['SPEC']['CR3'] == null
               ? ''
-              : databuff[i]['SPEC']['CR3']['HI'],
+              : databuff[i]['SPEC']['CR3']['HI'].toString(),
           f18: databuff[i]['SPEC']['CR3'] == null
               ? ''
-              : databuff[i]['SPEC']['CR3']['LOW'],
+              : databuff[i]['SPEC']['CR3']['LOW'].toString(),
           f19: databuff[i]['SPEC']['CECM'] == null
               ? ''
-              : databuff[i]['SPEC']['CECM']['HI'],
+              : databuff[i]['SPEC']['CECM']['HI'].toString(),
           f20: databuff[i]['SPEC']['CECM'] == null
               ? ''
-              : databuff[i]['SPEC']['CECM']['LOW'],
+              : databuff[i]['SPEC']['CECM']['LOW'].toString(),
           f21: databuff[i]['SPEC']['CE'] == null
               ? ''
-              : databuff[i]['SPEC']['CE']['HI'],
+              : databuff[i]['SPEC']['CE']['HI'].toString(),
           f22: databuff[i]['SPEC']['CE'] == null
               ? ''
-              : databuff[i]['SPEC']['CE']['LOW'],
+              : databuff[i]['SPEC']['CE']['LOW'].toString(),
         ));
       }
     } else {}
