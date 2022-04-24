@@ -1,4 +1,6 @@
 class PLX {
+  static List<String> CO = [''];
+  static List<String> AP = [''];
   static bool nc = true;
   static bool iscon01 = false;
   static String con01 = '';

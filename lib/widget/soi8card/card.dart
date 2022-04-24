@@ -7,9 +7,13 @@ class CardBody extends StatelessWidget {
     this.value1,
     this.value2,
     this.value3,
+    this.value4,
     this.colorValue1,
     this.colorValue2,
     this.colorValue3,
+    this.colorValue4,
+    this.iSmanual,
+    this.func,
   }) : super(key: key);
   String? name;
   String? value1;
@@ -20,6 +24,8 @@ class CardBody extends StatelessWidget {
   Color? colorValue3;
   String? value4;
   Color? colorValue4;
+  bool? iSmanual;
+  Function? func;
 
   @override
   Widget build(BuildContext context) {
@@ -47,13 +53,17 @@ class CardBody extends StatelessWidget {
                         style: const TextStyle(fontSize: 12),
                       ),
                       const Spacer(),
-                      // ElevatedButton(
-                      //   onPressed: () {},
-                      //   child: Text(
-                      //     value1 ?? "test",
-                      //     style: const TextStyle(fontSize: 12),
-                      //   ),
-                      // ),
+                      iSmanual ?? false
+                          ? ElevatedButton(
+                              onPressed: () {
+                                func;
+                              },
+                              child: const Text(
+                                "MANUAL",
+                                style: TextStyle(fontSize: 10),
+                              ),
+                            )
+                          : const SizedBox(),
                       const SizedBox(
                         width: 5,
                       ),

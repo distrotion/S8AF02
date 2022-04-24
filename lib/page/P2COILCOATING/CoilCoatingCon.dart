@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../bloc/BlocEvent/02-CoilCoating.dart';
 import '../../widget/common/ComInputText.dart';
+import '../../widget/common/Easydropdown.dart';
 import '../../widget/common/Loading.dart';
 import 'CoilCoatingTable.dart';
 import 'CoilCoatingVar.dart';
@@ -66,12 +67,15 @@ void COILCOATINGConsoleBox() {
                               ),
                             ],
                           ),
+                          const SizedBox(
+                            height: 24,
+                          ),
                           Row(
                             children: [
                               Column(
                                 children: const [
                                   SizedBox(
-                                    height: 64,
+                                    height: 40,
                                     width: 100,
                                     child: Align(
                                       alignment: Alignment.bottomCenter,
@@ -83,7 +87,7 @@ void COILCOATINGConsoleBox() {
                                     ),
                                   ),
                                   SizedBox(
-                                    height: 64,
+                                    height: 40,
                                     width: 100,
                                     child: Align(
                                       alignment: Alignment.bottomCenter,
@@ -99,32 +103,48 @@ void COILCOATINGConsoleBox() {
                               ),
                               Column(
                                 children: [
-                                  ComInputText(
-                                    sLabel: "Color",
-                                    height: 40,
-                                    width: 200,
-                                    isContr: COILCOATING.iscon01,
-                                    fnContr: (input) {
-                                      COILCOATING.iscon01 = input;
-                                    },
-                                    sValue: COILCOATING.con03,
-                                    returnfunc: (String s) {
-                                      COILCOATING.con03 = s;
-                                    },
-                                  ),
-                                  ComInputText(
-                                    sLabel: "Appearance",
-                                    height: 40,
-                                    width: 200,
-                                    isContr: COILCOATING.iscon01,
-                                    fnContr: (input) {
-                                      COILCOATING.iscon01 = input;
-                                    },
-                                    sValue: COILCOATING.con04,
-                                    returnfunc: (String s) {
-                                      COILCOATING.con04 = s;
-                                    },
-                                  ),
+                                  // ComInputText(
+                                  //   sLabel: "Color",
+                                  //   height: 40,
+                                  //   width: 200,
+                                  //   isContr: COILCOATING.iscon01,
+                                  //   fnContr: (input) {
+                                  //     COILCOATING.iscon01 = input;
+                                  //   },
+                                  //   sValue: COILCOATING.con03,
+                                  //   returnfunc: (String s) {
+                                  //     COILCOATING.con03 = s;
+                                  //   },
+                                  // ),
+                                  // ComInputText(
+                                  //   sLabel: "Appearance",
+                                  //   height: 40,
+                                  //   width: 200,
+                                  //   isContr: COILCOATING.iscon01,
+                                  //   fnContr: (input) {
+                                  //     COILCOATING.iscon01 = input;
+                                  //   },
+                                  //   sValue: COILCOATING.con04,
+                                  //   returnfunc: (String s) {
+                                  //     COILCOATING.con04 = s;
+                                  //   },
+                                  // ),
+                                  EasyDropDown(
+                                      listdropdown: COILCOATING.CO,
+                                      onChangeinside: (input) {
+                                        COILCOATING.con03 = input;
+                                      },
+                                      value: COILCOATING.con03,
+                                      width: 200,
+                                      height: 40),
+                                  EasyDropDown(
+                                      listdropdown: COILCOATING.AP,
+                                      onChangeinside: (input) {
+                                        COILCOATING.con04 = input;
+                                      },
+                                      value: COILCOATING.con04,
+                                      width: 200,
+                                      height: 40),
                                 ],
                               ),
                             ],

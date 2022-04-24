@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../bloc/BlocEvent/05-Tritrating.dart';
+import '../bloc/BlocEvent/10-dropdown.dart';
 import '../data/model.dart';
 import 'P5TRITRATING/TRITRATINGMain.dart';
+import 'P5TRITRATING/TRITRATINGVar.dart';
 import 'page0.dart';
 import '../data/global.dart';
 
@@ -11,7 +13,25 @@ class Page5 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Page5BlocTableBody();
+    return Page5BlocDROPDOWN();
+  }
+}
+
+class Page5BlocDROPDOWN extends StatelessWidget {
+  /// {@macro counter_page}
+  const Page5BlocDROPDOWN({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+        create: (_) => DROPDOWN_BLOCK(),
+        child: BlocBuilder<DROPDOWN_BLOCK, dropdown>(
+          builder: (context, DD) {
+            TRITRATING.CO = DD.CO;
+            TRITRATING.AP = DD.AP;
+            return Page5BlocTableBody();
+          },
+        ));
   }
 }
 

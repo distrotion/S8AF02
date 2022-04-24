@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tpk_login_v2/widget/common/Easydropdown.dart';
 
 import '../../bloc/BlocEvent/01-Premix.dart';
 import '../../widget/common/ComInputText.dart';
@@ -66,12 +67,15 @@ void PREMIXConsoleBox() {
                               ),
                             ],
                           ),
+                          const SizedBox(
+                            height: 24,
+                          ),
                           Row(
                             children: [
                               Column(
                                 children: const [
                                   SizedBox(
-                                    height: 64,
+                                    // height: 64,
                                     width: 100,
                                     child: Align(
                                       alignment: Alignment.bottomCenter,
@@ -83,7 +87,7 @@ void PREMIXConsoleBox() {
                                     ),
                                   ),
                                   SizedBox(
-                                    height: 64,
+                                    // height: 64,
                                     width: 100,
                                     child: Align(
                                       alignment: Alignment.bottomCenter,
@@ -99,32 +103,52 @@ void PREMIXConsoleBox() {
                               ),
                               Column(
                                 children: [
-                                  ComInputText(
-                                    sLabel: "Color",
-                                    height: 40,
-                                    width: 200,
-                                    isContr: PREMIX.iscon01,
-                                    fnContr: (input) {
-                                      PREMIX.iscon01 = input;
-                                    },
-                                    sValue: PREMIX.con03,
-                                    returnfunc: (String s) {
-                                      PREMIX.con03 = s;
-                                    },
-                                  ),
-                                  ComInputText(
-                                    sLabel: "Appearance",
-                                    height: 40,
-                                    width: 200,
-                                    isContr: PREMIX.iscon01,
-                                    fnContr: (input) {
-                                      PREMIX.iscon01 = input;
-                                    },
-                                    sValue: PREMIX.con04,
-                                    returnfunc: (String s) {
-                                      PREMIX.con04 = s;
-                                    },
-                                  ),
+                                  // ComInputText(
+                                  //   sLabel: "Color",
+                                  //   height: 40,
+                                  //   width: 200,
+                                  //   isContr: PREMIX.iscon01,
+                                  //   fnContr: (input) {
+                                  //     PREMIX.iscon01 = input;
+                                  //   },
+                                  //   sValue: PREMIX.con03,
+                                  //   returnfunc: (String s) {
+                                  //     PREMIX.con03 = s;
+                                  //   },
+                                  // ),
+                                  EasyDropDown(
+                                      listdropdown: PREMIX.CO,
+                                      onChangeinside: (input) {
+                                        PREMIX.con03 = input;
+                                      },
+                                      value: PREMIX.con03,
+                                      width: 200,
+                                      height: 40),
+
+                                  // ComInputText(
+                                  //   sLabel: "Appearance",
+                                  //   height: 40,
+                                  //   width: 200,
+                                  //   isContr: PREMIX.iscon01,
+                                  //   fnContr: (input) {
+                                  //     PREMIX.iscon01 = input;
+                                  //   },
+                                  //   sValue: PREMIX.con04,
+                                  //   returnfunc: (String s) {
+                                  //     PREMIX.con04 = s;
+                                  //   },
+                                  // ),
+                                  // const SizedBox(
+                                  //   height: 24,
+                                  // ),
+                                  EasyDropDown(
+                                      listdropdown: PREMIX.AP,
+                                      onChangeinside: (input) {
+                                        PREMIX.con04 = input;
+                                      },
+                                      value: PREMIX.con04,
+                                      width: 200,
+                                      height: 40),
                                 ],
                               ),
                             ],

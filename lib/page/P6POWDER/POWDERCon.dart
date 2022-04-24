@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../bloc/BlocEvent/06-POWDER.dart';
 import '../../widget/common/ComInputText.dart';
+import '../../widget/common/Easydropdown.dart';
 import '../../widget/common/Loading.dart';
 import 'POWDERTable.dart';
 import 'POWDERVar.dart';
@@ -66,12 +67,15 @@ void POWDERConsoleBox() {
                               ),
                             ],
                           ),
+                          const SizedBox(
+                            height: 24,
+                          ),
                           Row(
                             children: [
                               Column(
                                 children: const [
                                   SizedBox(
-                                    height: 64,
+                                    height: 40,
                                     width: 100,
                                     child: Align(
                                       alignment: Alignment.bottomCenter,
@@ -83,7 +87,7 @@ void POWDERConsoleBox() {
                                     ),
                                   ),
                                   SizedBox(
-                                    height: 64,
+                                    height: 40,
                                     width: 100,
                                     child: Align(
                                       alignment: Alignment.bottomCenter,
@@ -99,32 +103,48 @@ void POWDERConsoleBox() {
                               ),
                               Column(
                                 children: [
-                                  ComInputText(
-                                    sLabel: "Color",
-                                    height: 40,
-                                    width: 200,
-                                    isContr: POWDER.iscon01,
-                                    fnContr: (input) {
-                                      POWDER.iscon01 = input;
-                                    },
-                                    sValue: POWDER.con03,
-                                    returnfunc: (String s) {
-                                      POWDER.con03 = s;
-                                    },
-                                  ),
-                                  ComInputText(
-                                    sLabel: "Appearance",
-                                    height: 40,
-                                    width: 200,
-                                    isContr: POWDER.iscon01,
-                                    fnContr: (input) {
-                                      POWDER.iscon01 = input;
-                                    },
-                                    sValue: POWDER.con04,
-                                    returnfunc: (String s) {
-                                      POWDER.con04 = s;
-                                    },
-                                  ),
+                                  // ComInputText(
+                                  //   sLabel: "Color",
+                                  //   height: 40,
+                                  //   width: 200,
+                                  //   isContr: POWDER.iscon01,
+                                  //   fnContr: (input) {
+                                  //     POWDER.iscon01 = input;
+                                  //   },
+                                  //   sValue: POWDER.con03,
+                                  //   returnfunc: (String s) {
+                                  //     POWDER.con03 = s;
+                                  //   },
+                                  // ),
+                                  // ComInputText(
+                                  //   sLabel: "Appearance",
+                                  //   height: 40,
+                                  //   width: 200,
+                                  //   isContr: POWDER.iscon01,
+                                  //   fnContr: (input) {
+                                  //     POWDER.iscon01 = input;
+                                  //   },
+                                  //   sValue: POWDER.con04,
+                                  //   returnfunc: (String s) {
+                                  //     POWDER.con04 = s;
+                                  //   },
+                                  // ),
+                                  EasyDropDown(
+                                      listdropdown: POWDER.CO,
+                                      onChangeinside: (input) {
+                                        POWDER.con03 = input;
+                                      },
+                                      value: POWDER.con03,
+                                      width: 200,
+                                      height: 40),
+                                  EasyDropDown(
+                                      listdropdown: POWDER.AP,
+                                      onChangeinside: (input) {
+                                        POWDER.con04 = input;
+                                      },
+                                      value: POWDER.con04,
+                                      width: 200,
+                                      height: 40),
                                 ],
                               ),
                             ],

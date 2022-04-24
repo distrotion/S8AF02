@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../bloc/BlocEvent/03-HydroPhilic.dart';
 import '../../widget/common/ComInputText.dart';
+import '../../widget/common/Easydropdown.dart';
 import '../../widget/common/Loading.dart';
 import 'HydrophilicTable.dart';
 import 'HydrophilicVar.dart';
@@ -66,6 +67,9 @@ void HYDROPHILICConsoleBox() {
                               ),
                             ],
                           ),
+                          const SizedBox(
+                            height: 24,
+                          ),
                           Row(
                             children: [
                               Column(
@@ -99,32 +103,48 @@ void HYDROPHILICConsoleBox() {
                               ),
                               Column(
                                 children: [
-                                  ComInputText(
-                                    sLabel: "Color",
-                                    height: 40,
-                                    width: 200,
-                                    isContr: HYDROPHILIC.iscon01,
-                                    fnContr: (input) {
-                                      HYDROPHILIC.iscon01 = input;
-                                    },
-                                    sValue: HYDROPHILIC.con03,
-                                    returnfunc: (String s) {
-                                      HYDROPHILIC.con03 = s;
-                                    },
-                                  ),
-                                  ComInputText(
-                                    sLabel: "Appearance",
-                                    height: 40,
-                                    width: 200,
-                                    isContr: HYDROPHILIC.iscon01,
-                                    fnContr: (input) {
-                                      HYDROPHILIC.iscon01 = input;
-                                    },
-                                    sValue: HYDROPHILIC.con04,
-                                    returnfunc: (String s) {
-                                      HYDROPHILIC.con04 = s;
-                                    },
-                                  ),
+                                  // ComInputText(
+                                  //   sLabel: "Color",
+                                  //   height: 40,
+                                  //   width: 200,
+                                  //   isContr: HYDROPHILIC.iscon01,
+                                  //   fnContr: (input) {
+                                  //     HYDROPHILIC.iscon01 = input;
+                                  //   },
+                                  //   sValue: HYDROPHILIC.con03,
+                                  //   returnfunc: (String s) {
+                                  //     HYDROPHILIC.con03 = s;
+                                  //   },
+                                  // ),
+                                  // ComInputText(
+                                  //   sLabel: "Appearance",
+                                  //   height: 40,
+                                  //   width: 200,
+                                  //   isContr: HYDROPHILIC.iscon01,
+                                  //   fnContr: (input) {
+                                  //     HYDROPHILIC.iscon01 = input;
+                                  //   },
+                                  //   sValue: HYDROPHILIC.con04,
+                                  //   returnfunc: (String s) {
+                                  //     HYDROPHILIC.con04 = s;
+                                  //   },
+                                  // ),
+                                  EasyDropDown(
+                                      listdropdown: HYDROPHILIC.CO,
+                                      onChangeinside: (input) {
+                                        HYDROPHILIC.con03 = input;
+                                      },
+                                      value: HYDROPHILIC.con03,
+                                      width: 200,
+                                      height: 40),
+                                  EasyDropDown(
+                                      listdropdown: HYDROPHILIC.AP,
+                                      onChangeinside: (input) {
+                                        HYDROPHILIC.con04 = input;
+                                      },
+                                      value: HYDROPHILIC.con04,
+                                      width: 200,
+                                      height: 40),
                                 ],
                               ),
                             ],

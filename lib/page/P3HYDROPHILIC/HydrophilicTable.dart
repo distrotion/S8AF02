@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../bloc/BlocEvent/03-HydroPhilic.dart';
+import '../../bloc/BlocEvent/10-dropdown.dart';
 import '../../bloc/Cubit/Rebuild.dart';
 import '../../data/model.dart';
 import '../../widget/common/Loading.dart';
@@ -26,6 +27,7 @@ class _HydrophilicDataTableState extends State<HydrophilicDataTable> {
   @override
   void initState() {
     super.initState();
+    context.read<DROPDOWN_BLOCK>().add(DROPDOWN_GET());
     context.read<HydrophilicDataSetBloc>().add(GetDataPressed());
   }
 

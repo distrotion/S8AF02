@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../bloc/BlocEvent/05-Tritrating.dart';
 import '../../widget/common/ComInputText.dart';
+import '../../widget/common/Easydropdown.dart';
 import '../../widget/common/Loading.dart';
 import 'TRITRATINGTable.dart';
 import 'TRITRATINGVar.dart';
@@ -66,12 +67,15 @@ void TRITRATINGConsoleBox() {
                               ),
                             ],
                           ),
+                          const SizedBox(
+                            height: 24,
+                          ),
                           Row(
                             children: [
                               Column(
                                 children: const [
                                   SizedBox(
-                                    height: 64,
+                                    height: 40,
                                     width: 100,
                                     child: Align(
                                       alignment: Alignment.bottomCenter,
@@ -83,7 +87,7 @@ void TRITRATINGConsoleBox() {
                                     ),
                                   ),
                                   SizedBox(
-                                    height: 64,
+                                    height: 40,
                                     width: 100,
                                     child: Align(
                                       alignment: Alignment.bottomCenter,
@@ -99,32 +103,48 @@ void TRITRATINGConsoleBox() {
                               ),
                               Column(
                                 children: [
-                                  ComInputText(
-                                    sLabel: "Color",
-                                    height: 40,
-                                    width: 200,
-                                    isContr: TRITRATING.iscon01,
-                                    fnContr: (input) {
-                                      TRITRATING.iscon01 = input;
-                                    },
-                                    sValue: TRITRATING.con03,
-                                    returnfunc: (String s) {
-                                      TRITRATING.con03 = s;
-                                    },
-                                  ),
-                                  ComInputText(
-                                    sLabel: "Appearance",
-                                    height: 40,
-                                    width: 200,
-                                    isContr: TRITRATING.iscon01,
-                                    fnContr: (input) {
-                                      TRITRATING.iscon01 = input;
-                                    },
-                                    sValue: TRITRATING.con04,
-                                    returnfunc: (String s) {
-                                      TRITRATING.con04 = s;
-                                    },
-                                  ),
+                                  // ComInputText(
+                                  //   sLabel: "Color",
+                                  //   height: 40,
+                                  //   width: 200,
+                                  //   isContr: TRITRATING.iscon01,
+                                  //   fnContr: (input) {
+                                  //     TRITRATING.iscon01 = input;
+                                  //   },
+                                  //   sValue: TRITRATING.con03,
+                                  //   returnfunc: (String s) {
+                                  //     TRITRATING.con03 = s;
+                                  //   },
+                                  // ),
+                                  // ComInputText(
+                                  //   sLabel: "Appearance",
+                                  //   height: 40,
+                                  //   width: 200,
+                                  //   isContr: TRITRATING.iscon01,
+                                  //   fnContr: (input) {
+                                  //     TRITRATING.iscon01 = input;
+                                  //   },
+                                  //   sValue: TRITRATING.con04,
+                                  //   returnfunc: (String s) {
+                                  //     TRITRATING.con04 = s;
+                                  //   },
+                                  // ),
+                                  EasyDropDown(
+                                      listdropdown: TRITRATING.CO,
+                                      onChangeinside: (input) {
+                                        TRITRATING.con03 = input;
+                                      },
+                                      value: TRITRATING.con03,
+                                      width: 200,
+                                      height: 40),
+                                  EasyDropDown(
+                                      listdropdown: TRITRATING.AP,
+                                      onChangeinside: (input) {
+                                        TRITRATING.con04 = input;
+                                      },
+                                      value: TRITRATING.con04,
+                                      width: 200,
+                                      height: 40),
                                 ],
                               ),
                             ],

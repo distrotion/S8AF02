@@ -5,16 +5,21 @@ import '../../bloc/BlocEvent/LoginEvent.dart';
 import '../../bloc/Cubit/Rebuild.dart';
 import '../../mainBody.dart';
 import '../../page/page1.dart';
+import '../../page/page10.dart';
+import '../../page/page11.dart';
 import '../../page/page2.dart';
 import '../../page/page3.dart';
 import '../../page/page4.dart';
 import '../../page/page5.dart';
 import '../../page/page6.dart';
 import '../../page/page7.dart';
+import '../../page/page8.dart';
+import '../../page/page9.dart';
 import 'sub_widget.dart';
 
 late BuildContext MenuContext;
 bool menupop = false;
+bool WORDINGpop = false;
 
 class MainMenu extends StatefulWidget {
   MainMenu({Key? key}) : super(key: key);
@@ -91,20 +96,42 @@ class _Data_Menu_mainmenuState extends State<Data_Menu_mainmenu> {
               }
             });
           },
-          child: const SizedBox(
+          child: SizedBox(
             height: 50,
             child: Align(
               alignment: Alignment.centerLeft,
-              child: Text(
-                "   MASTER MENU",
-                style: TextStyle(
-                  fontFamily: 'Mitr',
-                  color: Colors.white,
-                  fontSize: 14,
-                  fontWeight: FontWeight.w300,
-                  fontStyle: FontStyle.normal,
-                  letterSpacing: 0,
-                ),
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        right: 6.0, left: 6, top: 4.0, bottom: 4.0),
+                    child: Container(
+                      height: 24,
+                      width: 24,
+                      child: Icon(
+                        menupop
+                            ? Icons.arrow_drop_up_outlined
+                            : Icons.arrow_drop_down_outlined,
+                        color: Colors.white,
+                      ),
+                      // decoration: BoxDecoration(
+                      //     image: DecorationImage(
+                      //         image: AssetImage(getShowHidePassword_ImgPath()),
+                      //         fit: BoxFit.fitHeight))
+                    ),
+                  ),
+                  const Text(
+                    "MASTER MENU",
+                    style: TextStyle(
+                      fontFamily: 'Mitr',
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w300,
+                      fontStyle: FontStyle.normal,
+                      letterSpacing: 0,
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
@@ -149,6 +176,87 @@ class _Data_Menu_mainmenuState extends State<Data_Menu_mainmenu> {
                   page: Page7(),
                   Lv: 1,
                 ),
+                // menu_sub(
+                //   name: "- Color",
+                //   page: Page10(),
+                //   Lv: 1,
+                // ),
+                // menu_sub(
+                //   name: "- APPEARANCE",
+                //   page: Page11(),
+                //   Lv: 1,
+                // ),
+              ],
+            ),
+          )
+        ] else ...[
+          const SizedBox(),
+        ],
+        InkWell(
+          onTap: () {
+            setState(() {
+              if (WORDINGpop) {
+                WORDINGpop = false;
+              } else {
+                WORDINGpop = true;
+              }
+            });
+          },
+          child: SizedBox(
+            height: 50,
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        right: 6.0, left: 6, top: 4.0, bottom: 4.0),
+                    child: Container(
+                      height: 24,
+                      width: 24,
+                      child: Icon(
+                        WORDINGpop
+                            ? Icons.arrow_drop_up_outlined
+                            : Icons.arrow_drop_down_outlined,
+                        color: Colors.white,
+                      ),
+                      // decoration: BoxDecoration(
+                      //     image: DecorationImage(
+                      //         image: AssetImage(getShowHidePassword_ImgPath()),
+                      //         fit: BoxFit.fitHeight))
+                    ),
+                  ),
+                  const Text(
+                    "MASTER WORDING",
+                    style: TextStyle(
+                      fontFamily: 'Mitr',
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w300,
+                      fontStyle: FontStyle.normal,
+                      letterSpacing: 0,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+        if (WORDINGpop) ...[
+          SizedBox(
+            height: 80,
+            child: Column(
+              children: [
+                menu_sub(
+                  name: "Color",
+                  page: Page10(),
+                  Lv: 1,
+                ),
+                menu_sub(
+                  name: "APPEARANCE",
+                  page: Page11(),
+                  Lv: 1,
+                ),
               ],
             ),
           )
@@ -157,12 +265,7 @@ class _Data_Menu_mainmenuState extends State<Data_Menu_mainmenu> {
         ],
         menu_normal(
           name: "APPROVE TO SCADA",
-          page: Page6(),
-          Lv: 1,
-        ),
-        menu_normal(
-          name: "New Order",
-          page: Page7(),
+          page: Page8(),
           Lv: 1,
         ),
         menu_logout(

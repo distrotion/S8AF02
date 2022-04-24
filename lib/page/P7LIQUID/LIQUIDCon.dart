@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../bloc/BlocEvent/07-Liquid.dart';
 import '../../widget/common/ComInputText.dart';
+import '../../widget/common/Easydropdown.dart';
 import '../../widget/common/Loading.dart';
 import 'LIQUIDTable.dart';
 import 'LIQUIDVar.dart';
@@ -66,12 +67,15 @@ void LIQUIDConsoleBox() {
                               ),
                             ],
                           ),
+                          const SizedBox(
+                            height: 24,
+                          ),
                           Row(
                             children: [
                               Column(
                                 children: const [
                                   SizedBox(
-                                    height: 64,
+                                    height: 40,
                                     width: 100,
                                     child: Align(
                                       alignment: Alignment.bottomCenter,
@@ -83,7 +87,7 @@ void LIQUIDConsoleBox() {
                                     ),
                                   ),
                                   SizedBox(
-                                    height: 64,
+                                    height: 40,
                                     width: 100,
                                     child: Align(
                                       alignment: Alignment.bottomCenter,
@@ -99,32 +103,48 @@ void LIQUIDConsoleBox() {
                               ),
                               Column(
                                 children: [
-                                  ComInputText(
-                                    sLabel: "Color",
-                                    height: 40,
-                                    width: 200,
-                                    isContr: LIQUID.iscon01,
-                                    fnContr: (input) {
-                                      LIQUID.iscon01 = input;
-                                    },
-                                    sValue: LIQUID.con03,
-                                    returnfunc: (String s) {
-                                      LIQUID.con03 = s;
-                                    },
-                                  ),
-                                  ComInputText(
-                                    sLabel: "Appearance",
-                                    height: 40,
-                                    width: 200,
-                                    isContr: LIQUID.iscon01,
-                                    fnContr: (input) {
-                                      LIQUID.iscon01 = input;
-                                    },
-                                    sValue: LIQUID.con04,
-                                    returnfunc: (String s) {
-                                      LIQUID.con04 = s;
-                                    },
-                                  ),
+                                  // ComInputText(
+                                  //   sLabel: "Color",
+                                  //   height: 40,
+                                  //   width: 200,
+                                  //   isContr: LIQUID.iscon01,
+                                  //   fnContr: (input) {
+                                  //     LIQUID.iscon01 = input;
+                                  //   },
+                                  //   sValue: LIQUID.con03,
+                                  //   returnfunc: (String s) {
+                                  //     LIQUID.con03 = s;
+                                  //   },
+                                  // ),
+                                  // ComInputText(
+                                  //   sLabel: "Appearance",
+                                  //   height: 40,
+                                  //   width: 200,
+                                  //   isContr: LIQUID.iscon01,
+                                  //   fnContr: (input) {
+                                  //     LIQUID.iscon01 = input;
+                                  //   },
+                                  //   sValue: LIQUID.con04,
+                                  //   returnfunc: (String s) {
+                                  //     LIQUID.con04 = s;
+                                  //   },
+                                  // ),
+                                  EasyDropDown(
+                                      listdropdown: LIQUID.CO,
+                                      onChangeinside: (input) {
+                                        LIQUID.con03 = input;
+                                      },
+                                      value: LIQUID.con03,
+                                      width: 200,
+                                      height: 40),
+                                  EasyDropDown(
+                                      listdropdown: LIQUID.AP,
+                                      onChangeinside: (input) {
+                                        LIQUID.con04 = input;
+                                      },
+                                      value: LIQUID.con04,
+                                      width: 200,
+                                      height: 40),
                                 ],
                               ),
                             ],

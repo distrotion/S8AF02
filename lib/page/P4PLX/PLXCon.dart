@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../bloc/BlocEvent/04-PLX.dart';
 import '../../widget/common/ComInputText.dart';
+import '../../widget/common/Easydropdown.dart';
 import '../../widget/common/Loading.dart';
 import 'PLXTable.dart';
 import 'PLXVar.dart';
@@ -66,12 +67,15 @@ void PLXConsoleBox() {
                               ),
                             ],
                           ),
+                          const SizedBox(
+                            height: 24,
+                          ),
                           Row(
                             children: [
                               Column(
                                 children: const [
                                   SizedBox(
-                                    height: 64,
+                                    height: 40,
                                     width: 100,
                                     child: Align(
                                       alignment: Alignment.bottomCenter,
@@ -83,7 +87,7 @@ void PLXConsoleBox() {
                                     ),
                                   ),
                                   SizedBox(
-                                    height: 64,
+                                    height: 40,
                                     width: 100,
                                     child: Align(
                                       alignment: Alignment.bottomCenter,
@@ -99,32 +103,48 @@ void PLXConsoleBox() {
                               ),
                               Column(
                                 children: [
-                                  ComInputText(
-                                    sLabel: "Color",
-                                    height: 40,
-                                    width: 200,
-                                    isContr: PLX.iscon01,
-                                    fnContr: (input) {
-                                      PLX.iscon01 = input;
-                                    },
-                                    sValue: PLX.con03,
-                                    returnfunc: (String s) {
-                                      PLX.con03 = s;
-                                    },
-                                  ),
-                                  ComInputText(
-                                    sLabel: "Appearance",
-                                    height: 40,
-                                    width: 200,
-                                    isContr: PLX.iscon01,
-                                    fnContr: (input) {
-                                      PLX.iscon01 = input;
-                                    },
-                                    sValue: PLX.con04,
-                                    returnfunc: (String s) {
-                                      PLX.con04 = s;
-                                    },
-                                  ),
+                                  // ComInputText(
+                                  //   sLabel: "Color",
+                                  //   height: 40,
+                                  //   width: 200,
+                                  //   isContr: PLX.iscon01,
+                                  //   fnContr: (input) {
+                                  //     PLX.iscon01 = input;
+                                  //   },
+                                  //   sValue: PLX.con03,
+                                  //   returnfunc: (String s) {
+                                  //     PLX.con03 = s;
+                                  //   },
+                                  // ),
+                                  // ComInputText(
+                                  //   sLabel: "Appearance",
+                                  //   height: 40,
+                                  //   width: 200,
+                                  //   isContr: PLX.iscon01,
+                                  //   fnContr: (input) {
+                                  //     PLX.iscon01 = input;
+                                  //   },
+                                  //   sValue: PLX.con04,
+                                  //   returnfunc: (String s) {
+                                  //     PLX.con04 = s;
+                                  //   },
+                                  // ),
+                                  EasyDropDown(
+                                      listdropdown: PLX.CO,
+                                      onChangeinside: (input) {
+                                        PLX.con03 = input;
+                                      },
+                                      value: PLX.con03,
+                                      width: 200,
+                                      height: 40),
+                                  EasyDropDown(
+                                      listdropdown: PLX.AP,
+                                      onChangeinside: (input) {
+                                        PLX.con04 = input;
+                                      },
+                                      value: PLX.con04,
+                                      width: 200,
+                                      height: 40),
                                 ],
                               ),
                             ],
