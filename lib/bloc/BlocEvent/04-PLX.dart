@@ -6,7 +6,7 @@ import '../../page/P4PLX/PLXVar.dart';
 
 abstract class PLXDataSetEvent {}
 
-String server = 'http://127.0.0.1:9210/';
+String server = 'http://127.0.0.1:15000/';
 
 class GetDataPressed extends PLXDataSetEvent {}
 
@@ -131,6 +131,38 @@ class PLXDataSetBloc extends Bloc<PLXDataSetEvent, List<dataset>> {
           "NVC": {
             "HI": PLX.conMAX07,
             "LOW": PLX.conMIN07,
+          },
+        },
+        "SPECcoa": {
+          "COLOR": PLX.con03COA,
+          "APPEARANCE": PLX.con04COA,
+          "TC": {
+            "HI": PLX.conMAX01COA,
+            "LOW": PLX.conMIN01COA,
+          },
+          "THOP": {
+            "HI": PLX.conMAX02COA,
+            "LOW": PLX.conMIN02COA,
+          },
+          "FHOP": {
+            "HI": PLX.conMAX03COA,
+            "LOW": PLX.conMIN03COA,
+          },
+          "FT": {
+            "HI": PLX.conMAX04COA,
+            "LOW": PLX.conMIN04COA,
+          },
+          "Viscosity": {
+            "HI": PLX.conMAX05COA,
+            "LOW": PLX.conMIN05COA,
+          },
+          "PaticleSize": {
+            "HI": PLX.conMAX06COA,
+            "LOW": PLX.conMIN06COA,
+          },
+          "NVC": {
+            "HI": PLX.conMAX07COA,
+            "LOW": PLX.conMIN07COA,
           },
         }
       },

@@ -6,7 +6,7 @@ import '../../page/P5TRITRATING/TRITRATINGVar.dart';
 
 abstract class TRITRATINGDataSetEvent {}
 
-String server = 'http://127.0.0.1:9210/';
+String server = 'http://127.0.0.1:15000/';
 
 class GetDataPressed extends TRITRATINGDataSetEvent {}
 
@@ -122,6 +122,34 @@ class TRITRATINGDataSetBloc
           "ACO": {
             "HI": TRITRATING.conMAX06,
             "LOW": TRITRATING.conMIN06,
+          },
+        },
+        "SPECcoa": {
+          "COLOR": TRITRATING.con03COA,
+          "APPEARANCE": TRITRATING.con04COA,
+          "SG": {
+            "HI": TRITRATING.conMAX01COA,
+            "LOW": TRITRATING.conMIN01COA,
+          },
+          "TA": {
+            "HI": TRITRATING.conMAX02COA,
+            "LOW": TRITRATING.conMIN02COA,
+          },
+          "T_Al": {
+            "HI": TRITRATING.conMAX03COA,
+            "LOW": TRITRATING.conMIN03COA,
+          },
+          "PH": {
+            "HI": TRITRATING.conMAX04COA,
+            "LOW": TRITRATING.conMIN04COA,
+          },
+          "FACTOR": {
+            "HI": TRITRATING.conMAX05COA,
+            "LOW": TRITRATING.conMIN05COA,
+          },
+          "ACO": {
+            "HI": TRITRATING.conMAX06COA,
+            "LOW": TRITRATING.conMIN06COA,
           },
         }
       },

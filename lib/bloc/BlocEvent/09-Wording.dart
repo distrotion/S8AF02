@@ -7,7 +7,7 @@ import '../../page/P9COLOR/COLORVar.dart';
 
 abstract class WORDINGDataSetEvent {}
 
-String server = 'http://127.0.0.1:9210/';
+String server = 'http://127.0.0.1:15000/';
 
 class ColorGetPressed extends WORDINGDataSetEvent {}
 
@@ -55,6 +55,8 @@ class WORDINGDataSetBloc extends Bloc<WORDINGDataSetEvent, List<dataset>> {
           id: i + 1,
           f01: databuff[i]['WID'].toString(),
           f02: databuff[i]['value'].toString(),
+          f03: databuff[i]['code'].toString(),
+          f04: databuff[i]['plant'].toString(),
         ));
       }
     } else {}
@@ -69,6 +71,8 @@ class WORDINGDataSetBloc extends Bloc<WORDINGDataSetEvent, List<dataset>> {
       data: {
         "WID": COLOR.con01,
         "value": COLOR.con02,
+        "code": COLOR.con03,
+        "plant": COLOR.con04,
       },
     );
     List<dataset> output = [];
@@ -82,6 +86,8 @@ class WORDINGDataSetBloc extends Bloc<WORDINGDataSetEvent, List<dataset>> {
           id: i + 1,
           f01: databuff[i]['WID'].toString(),
           f02: databuff[i]['value'].toString(),
+          f03: databuff[i]['code'].toString(),
+          f04: databuff[i]['plant'].toString(),
         ));
       }
     } else {}
@@ -104,6 +110,8 @@ class WORDINGDataSetBloc extends Bloc<WORDINGDataSetEvent, List<dataset>> {
           id: i + 1,
           f01: databuff[i]['WID'].toString(),
           f02: databuff[i]['value'].toString(),
+          f03: databuff[i]['code'].toString(),
+          f04: databuff[i]['plant'].toString(),
         ));
       }
     } else {}
@@ -117,6 +125,8 @@ class WORDINGDataSetBloc extends Bloc<WORDINGDataSetEvent, List<dataset>> {
       data: {
         "WID": APPEARANCE.con01,
         "value": APPEARANCE.con02,
+        "code": APPEARANCE.con03,
+        "plant": APPEARANCE.con04,
       },
     );
     List<dataset> output = [];
@@ -129,6 +139,8 @@ class WORDINGDataSetBloc extends Bloc<WORDINGDataSetEvent, List<dataset>> {
           id: i + 1,
           f01: databuff[i]['WID'].toString(),
           f02: databuff[i]['value'].toString(),
+          f03: databuff[i]['code'].toString(),
+          f04: databuff[i]['plant'].toString(),
         ));
       }
     } else {}

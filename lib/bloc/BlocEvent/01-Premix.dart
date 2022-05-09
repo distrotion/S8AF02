@@ -7,7 +7,7 @@ import '../../page/P1PREMIX/datatest.dart';
 
 abstract class PremixDataSetEvent {}
 
-String server = 'http://127.0.0.1:9210/';
+String server = 'http://127.0.0.1:15000/';
 
 class GetDataPressed extends PremixDataSetEvent {}
 
@@ -122,6 +122,34 @@ class PremixDataSetBloc extends Bloc<PremixDataSetEvent, List<dataset>> {
           "MN": {
             "HI": PREMIX.conMAX06,
             "LOW": PREMIX.conMIN06,
+          },
+        },
+        "SPECcoa": {
+          "COLOR": PREMIX.con03COA,
+          "APPEARANCE": PREMIX.con04COA,
+          "SG": {
+            "HI": PREMIX.conMAX01COA,
+            "LOW": PREMIX.conMIN01COA,
+          },
+          "FA": {
+            "HI": PREMIX.conMAX02COA,
+            "LOW": PREMIX.conMIN02COA,
+          },
+          "TA": {
+            "HI": PREMIX.conMAX03COA,
+            "LOW": PREMIX.conMIN03COA,
+          },
+          "ZN": {
+            "HI": PREMIX.conMAX04COA,
+            "LOW": PREMIX.conMIN04COA,
+          },
+          "NI": {
+            "HI": PREMIX.conMAX05COA,
+            "LOW": PREMIX.conMIN05COA,
+          },
+          "MN": {
+            "HI": PREMIX.conMAX06COA,
+            "LOW": PREMIX.conMIN06COA,
           },
         }
       },

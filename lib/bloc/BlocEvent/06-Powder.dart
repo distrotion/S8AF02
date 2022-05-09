@@ -6,7 +6,7 @@ import '../../page/P6POWDER/POWDERVar.dart';
 
 abstract class POWDERDataSetEvent {}
 
-String server = 'http://127.0.0.1:9210/';
+String server = 'http://127.0.0.1:15000/';
 
 class GetDataPressed extends POWDERDataSetEvent {}
 
@@ -154,7 +154,48 @@ class POWDERDataSetBloc extends Bloc<POWDERDataSetEvent, List<dataset>> {
             "HI": POWDER.conMAX09,
             "LOW": POWDER.conMIN09,
           },
-        }
+        },
+        "SPECcoa": {
+          "COLOR": POWDER.con03COA,
+          "APPEARANCE": POWDER.con04COA,
+          "SG": {
+            "HI": POWDER.conMAX01COA,
+            "LOW": POWDER.conMIN01COA,
+          },
+          "FA": {
+            "HI": POWDER.conMAX02COA,
+            "LOW": POWDER.conMIN02COA,
+          },
+          "TA": {
+            "HI": POWDER.conMAX03COA,
+            "LOW": POWDER.conMIN03COA,
+          },
+          "F_Al": {
+            "HI": POWDER.conMAX04COA,
+            "LOW": POWDER.conMIN04COA,
+          },
+          "T_Al": {
+            "HI": POWDER.conMAX05COA,
+            "LOW": POWDER.conMIN05COA,
+          },
+          "ACO": {
+            "HI": POWDER.conMAX06COA,
+            "LOW": POWDER.conMIN06COA,
+          },
+          //
+          "PH": {
+            "HI": POWDER.conMAX07COA,
+            "LOW": POWDER.conMIN07COA,
+          },
+          "CR6": {
+            "HI": POWDER.conMAX08COA,
+            "LOW": POWDER.conMIN08COA,
+          },
+          "BABCOCK": {
+            "HI": POWDER.conMAX09COA,
+            "LOW": POWDER.conMIN09COA,
+          },
+        },
       },
     );
     List<dataset> output = [];

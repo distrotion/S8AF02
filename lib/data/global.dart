@@ -18,3 +18,14 @@ class PageLevel {
   static int page09 = 1;
   static int page10 = 1;
 }
+
+class valueinput {
+  static String poid = '';
+  static String plant = '';
+  static int textorvalue = 0;
+  static bool isbool = false;
+  static String item = '';
+  static String value = '';
+}
+
+String mainserver = 'http://127.0.0.1:15000/';

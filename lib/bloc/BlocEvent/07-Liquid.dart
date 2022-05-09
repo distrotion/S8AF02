@@ -6,7 +6,7 @@ import '../../page/P7LIQUID/LIQUIDVar.dart';
 
 abstract class LIQUIDDataSetEvent {}
 
-String server = 'http://127.0.0.1:9210/';
+String server = 'http://127.0.0.1:15000/';
 
 class GetDataPressed extends LIQUIDDataSetEvent {}
 
@@ -285,6 +285,99 @@ class LIQUIDDataSetBloc extends Bloc<LIQUIDDataSetEvent, List<dataset>> {
           "RP": {
             "HI": LIQUID.conMAX22,
             "LOW": LIQUID.conMIN22,
+          },
+        },
+        "SPECcoa": {
+          "COLOR": LIQUID.con03COA,
+          "APPEARANCE": LIQUID.con04COA,
+          "SG": {
+            "HI": LIQUID.conMAX01COA,
+            "LOW": LIQUID.conMIN01COA,
+          },
+          "FA": {
+            "HI": LIQUID.conMAX02COA,
+            "LOW": LIQUID.conMIN02COA,
+          },
+          "TA": {
+            "HI": LIQUID.conMAX03COA,
+            "LOW": LIQUID.conMIN03COA,
+          },
+          "F_Al": {
+            "HI": LIQUID.conMAX04COA,
+            "LOW": LIQUID.conMIN04COA,
+          },
+          "T_Al": {
+            "HI": LIQUID.conMAX05COA,
+            "LOW": LIQUID.conMIN05COA,
+          },
+          "PH": {
+            "HI": LIQUID.conMAX06COA,
+            "LOW": LIQUID.conMIN06COA,
+          },
+          //
+          "AL": {
+            "HI": LIQUID.conMAX07COA,
+            "LOW": LIQUID.conMIN07COA,
+          },
+          "CE": {
+            "HI": LIQUID.conMAX08COA,
+            "LOW": LIQUID.conMIN08COA,
+          },
+          "CR6": {
+            "HI": LIQUID.conMAX09COA,
+            "LOW": LIQUID.conMIN09COA,
+          },
+          "TCr": {
+            "HI": LIQUID.conMAX10COA,
+            "LOW": LIQUID.conMIN10COA,
+          },
+          "MN": {
+            "HI": LIQUID.conMAX11COA,
+            "LOW": LIQUID.conMIN11COA,
+          },
+          "NI": {
+            "HI": LIQUID.conMAX12COA,
+            "LOW": LIQUID.conMIN12COA,
+          },
+          "NVC": {
+            "HI": LIQUID.conMAX13COA,
+            "LOW": LIQUID.conMIN13COA,
+          },
+          "Starch": {
+            "HI": LIQUID.conMAX14COA,
+            "LOW": LIQUID.conMIN14COA,
+          },
+          "V": {
+            "HI": LIQUID.conMAX15COA,
+            "LOW": LIQUID.conMIN15COA,
+          },
+          "ZN": {
+            "HI": LIQUID.conMAX16COA,
+            "LOW": LIQUID.conMIN16COA,
+          },
+          "ZR": {
+            "HI": LIQUID.conMAX17COA,
+            "LOW": LIQUID.conMIN17COA,
+          },
+          "Viscosity": {
+            "HI": LIQUID.conMAX18COA,
+            "LOW": LIQUID.conMIN18COA,
+          },
+          "TI": {
+            "HI": LIQUID.conMAX19COA,
+            "LOW": LIQUID.conMIN19COA,
+          },
+          "Surfactant": {
+            "HI": LIQUID.conMAX20COA,
+            "LOW": LIQUID.conMIN20COA,
+          },
+          "FE": {
+            "HI": LIQUID.conMAX21COA,
+            "LOW": LIQUID.conMIN21COA,
+          },
+          "RP": {
+            "HI": LIQUID.conMAX22COA,
+            "LOW": LIQUID.conMIN22COA,
           },
         }
       },

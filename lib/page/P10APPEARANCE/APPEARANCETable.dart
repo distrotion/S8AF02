@@ -170,16 +170,16 @@ class _APPEARANCEDataTableState extends State<APPEARANCEDataTable> {
                         onSort: (int columnIndex, bool ascending) =>
                             _sort<String>(
                                 (dataset d) => d.f02, columnIndex, ascending)),
-                    // DataColumn(
-                    //     label: const Text('Field03'),
-                    //     onSort: (int columnIndex, bool ascending) =>
-                    //         _sort<String>(
-                    //             (dataset d) => d.f03, columnIndex, ascending)),
-                    // DataColumn(
-                    //     label: const Text('Field04'),
-                    //     onSort: (int columnIndex, bool ascending) =>
-                    //         _sort<String>(
-                    //             (dataset d) => d.f04, columnIndex, ascending)),
+                    DataColumn(
+                        label: const Text('Field03'),
+                        onSort: (int columnIndex, bool ascending) =>
+                            _sort<String>(
+                                (dataset d) => d.f03, columnIndex, ascending)),
+                    DataColumn(
+                        label: const Text('Field04'),
+                        onSort: (int columnIndex, bool ascending) =>
+                            _sort<String>(
+                                (dataset d) => d.f04, columnIndex, ascending)),
                     DataColumn(
                         label: const Text('Field05'),
                         onSort: (int columnIndex, bool ascending) =>
@@ -262,8 +262,8 @@ class _MyData extends DataTableSource {
           DataCell(Text(data.id.toString())),
           DataCell(Text(data.f01)),
           DataCell(Text(data.f02)),
-          // DataCell(Text(data.f03)),
-          // DataCell(Text(data.f04)),
+          DataCell(Text(data.f03)),
+          DataCell(Text(data.f04)),
           DataCell(Row(
             children: [
               InkWell(

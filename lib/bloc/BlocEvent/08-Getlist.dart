@@ -6,7 +6,7 @@ import '../../data/model.dart';
 
 //-------------------------------------------------
 
-String server = 'http://127.0.0.1:9210/';
+String server = 'http://127.0.0.1:15000/';
 
 abstract class GETSTAFFDATAEvent {}
 
@@ -21,7 +21,7 @@ class GETSTAFFDATABloc extends Bloc<GETSTAFFDATAEvent, List<unitdata>> {
   Future<void> _GETSTAFFDATAFn(
       List<unitdata> toAdd, Emitter<List<unitdata>> emit) async {
     final response = await Dio().post(
-      server + "getliststaff",
+      server + "getlistmana",
       data: {},
     );
 

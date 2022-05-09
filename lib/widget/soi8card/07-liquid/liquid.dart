@@ -11,7 +11,7 @@ class LIQUIDcardBODY extends StatelessWidget {
     this.PO,
     this.MATCP,
     this.status,
-    this.SendToAPP,
+    required this.SendToAPP,
     //
     this.COLORch,
     this.APPEARANCEch,
@@ -66,7 +66,7 @@ class LIQUIDcardBODY extends StatelessWidget {
   String? PO;
   String? MATCP;
   String? status;
-  Function? SendToAPP;
+  Function SendToAPP;
   //--------------
   bool? COLORch;
   bool? APPEARANCEch;
@@ -175,9 +175,9 @@ class LIQUIDcardBODY extends StatelessWidget {
                   ),
                   border: Border.all(color: Colors.black, width: 2),
                 ),
-                child: const Center(
+                child: Center(
                   child: Text(
-                    "Status",
+                    status ?? '',
                     style: TextStyle(fontSize: 15),
                   ),
                 ),
@@ -187,7 +187,7 @@ class LIQUIDcardBODY extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  SendToAPP ?? () {};
+                  SendToAPP('${PO}-${_MATCP}');
                 },
                 child: Container(
                   height: 40,

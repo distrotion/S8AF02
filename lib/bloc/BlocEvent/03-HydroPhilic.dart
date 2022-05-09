@@ -6,7 +6,7 @@ import '../../page/P3HYDROPHILIC/HydrophilicVar.dart';
 
 abstract class HydrophilicDataSetEvent {}
 
-String server = 'http://127.0.0.1:9210/';
+String server = 'http://127.0.0.1:15000/';
 
 class GetDataPressed extends HydrophilicDataSetEvent {}
 
@@ -152,6 +152,46 @@ class HydrophilicDataSetBloc
           "CE": {
             "HI": HYDROPHILIC.conMAX07,
             "LOW": HYDROPHILIC.conMIN07,
+          },
+        },
+        "SPECcoa": {
+          "COLOR": HYDROPHILIC.con03COA,
+          "APPEARANCE": HYDROPHILIC.con04COA,
+          "SG": {
+            "HI": HYDROPHILIC.conMAX01COA,
+            "LOW": HYDROPHILIC.conMIN01COA,
+          },
+          "FA": {
+            "HI": HYDROPHILIC.conMAX02COA,
+            "LOW": HYDROPHILIC.conMIN02COA,
+          },
+          "TA": {
+            "HI": HYDROPHILIC.conMAX03COA,
+            "LOW": HYDROPHILIC.conMIN03COA,
+          },
+          "PH": {
+            "HI": HYDROPHILIC.conMAX04COA,
+            "LOW": HYDROPHILIC.conMIN04COA,
+          },
+          "NVC": {
+            "HI": HYDROPHILIC.conMAX05COA,
+            "LOW": HYDROPHILIC.conMIN05COA,
+          },
+          "Brix": {
+            "HI": HYDROPHILIC.conMAX06COA,
+            "LOW": HYDROPHILIC.conMIN06COA,
+          },
+          "CR3": {
+            "HI": HYDROPHILIC.conMAX07COA,
+            "LOW": HYDROPHILIC.conMIN07COA,
+          },
+          "CECM": {
+            "HI": HYDROPHILIC.conMAX07COA,
+            "LOW": HYDROPHILIC.conMIN07COA,
+          },
+          "CE": {
+            "HI": HYDROPHILIC.conMAX07COA,
+            "LOW": HYDROPHILIC.conMIN07COA,
           },
         }
       },

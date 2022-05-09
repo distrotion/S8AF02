@@ -6,7 +6,7 @@ import '../../page/P2COILCOATING/CoilCoatingVar.dart';
 
 abstract class CoilCoatingDataSetEvent {}
 
-String server = 'http://127.0.0.1:9210/';
+String server = 'http://127.0.0.1:15000/';
 
 class GetDataPressed extends CoilCoatingDataSetEvent {}
 
@@ -132,6 +132,38 @@ class CoilCoatingDataSetBloc
           "PURITY": {
             "HI": COILCOATING.conMAX07,
             "LOW": COILCOATING.conMIN07,
+          },
+        },
+        "SPECcoa": {
+          "COLOR": COILCOATING.con03COA,
+          "APPEARANCE": COILCOATING.con04COA,
+          "SG": {
+            "HI": COILCOATING.conMAX01COA,
+            "LOW": COILCOATING.conMIN01COA,
+          },
+          "FA": {
+            "HI": COILCOATING.conMAX02COA,
+            "LOW": COILCOATING.conMIN02COA,
+          },
+          "TA": {
+            "HI": COILCOATING.conMAX03COA,
+            "LOW": COILCOATING.conMIN03COA,
+          },
+          "T_Al": {
+            "HI": COILCOATING.conMAX04COA,
+            "LOW": COILCOATING.conMIN04COA,
+          },
+          "PH": {
+            "HI": COILCOATING.conMAX05COA,
+            "LOW": COILCOATING.conMIN05COA,
+          },
+          "NVC": {
+            "HI": COILCOATING.conMAX06COA,
+            "LOW": COILCOATING.conMIN06COA,
+          },
+          "PURITY": {
+            "HI": COILCOATING.conMAX07COA,
+            "LOW": COILCOATING.conMIN07COA,
           },
         }
       },

@@ -53,6 +53,96 @@ class dataset {
     this.f48 = '',
     this.f49 = '',
     this.f50 = '',
+    this.f51 = '',
+    this.f52 = '',
+    this.f53 = '',
+    this.f54 = '',
+    this.f55 = '',
+    this.f56 = '',
+    this.f57 = '',
+    this.f58 = '',
+    this.f59 = '',
+    this.f60 = '',
+    this.f61 = '',
+    this.f62 = '',
+    this.f63 = '',
+    this.f64 = '',
+    this.f65 = '',
+    this.f66 = '',
+    this.f67 = '',
+    this.f68 = '',
+    this.f69 = '',
+    this.f70 = '',
+    this.f71 = '',
+    this.f72 = '',
+    this.f73 = '',
+    this.f74 = '',
+    this.f75 = '',
+    this.f76 = '',
+    this.f77 = '',
+    this.f78 = '',
+    this.f79 = '',
+    this.f80 = '',
+    this.f81 = '',
+    this.f82 = '',
+    this.f83 = '',
+    this.f84 = '',
+    this.f85 = '',
+    this.f86 = '',
+    this.f87 = '',
+    this.f88 = '',
+    this.f89 = '',
+    this.f90 = '',
+    this.f91 = '',
+    this.f92 = '',
+    this.f93 = '',
+    this.f94 = '',
+    this.f95 = '',
+    this.f96 = '',
+    this.f97 = '',
+    this.f98 = '',
+    this.f99 = '',
+    this.f100 = '',
+    this.f101 = '',
+    this.f102 = '',
+    this.f103 = '',
+    this.f104 = '',
+    this.f105 = '',
+    this.f106 = '',
+    this.f107 = '',
+    this.f108 = '',
+    this.f109 = '',
+    this.f110 = '',
+    this.f111 = '',
+    this.f112 = '',
+    this.f113 = '',
+    this.f114 = '',
+    this.f115 = '',
+    this.f116 = '',
+    this.f117 = '',
+    this.f118 = '',
+    this.f119 = '',
+    this.f120 = '',
+    this.f121 = '',
+    this.f122 = '',
+    this.f123 = '',
+    this.f124 = '',
+    this.f125 = '',
+    this.f126 = '',
+    this.f127 = '',
+    this.f128 = '',
+    this.f129 = '',
+    this.f130 = '',
+    this.f131 = '',
+    this.f132 = '',
+    this.f133 = '',
+    this.f134 = '',
+    this.f135 = '',
+    this.f136 = '',
+    this.f137 = '',
+    this.f138 = '',
+    this.f139 = '',
+    this.f140 = '',
   });
   int id;
   String f01;
@@ -105,6 +195,96 @@ class dataset {
   String f48;
   String f49;
   String f50;
+  String f51;
+  String f52;
+  String f53;
+  String f54;
+  String f55;
+  String f56;
+  String f57;
+  String f58;
+  String f59;
+  String f60;
+  String f61;
+  String f62;
+  String f63;
+  String f64;
+  String f65;
+  String f66;
+  String f67;
+  String f68;
+  String f69;
+  String f70;
+  String f71;
+  String f72;
+  String f73;
+  String f74;
+  String f75;
+  String f76;
+  String f77;
+  String f78;
+  String f79;
+  String f80;
+  String f81;
+  String f82;
+  String f83;
+  String f84;
+  String f85;
+  String f86;
+  String f87;
+  String f88;
+  String f89;
+  String f90;
+  String f91;
+  String f92;
+  String f93;
+  String f94;
+  String f95;
+  String f96;
+  String f97;
+  String f98;
+  String f99;
+  String f100;
+  String f101;
+  String f102;
+  String f103;
+  String f104;
+  String f105;
+  String f106;
+  String f107;
+  String f108;
+  String f109;
+  String f110;
+  String f111;
+  String f112;
+  String f113;
+  String f114;
+  String f115;
+  String f116;
+  String f117;
+  String f118;
+  String f119;
+  String f120;
+  String f121;
+  String f122;
+  String f123;
+  String f124;
+  String f125;
+  String f126;
+  String f127;
+  String f128;
+  String f129;
+  String f130;
+  String f131;
+  String f132;
+  String f133;
+  String f134;
+  String f135;
+  String f136;
+  String f137;
+  String f138;
+  String f139;
+  String f140;
 
   bool selected = false;
 }
@@ -301,6 +481,28 @@ class edgedata {
 
 class dropdown {
   dropdown({required this.CO, required this.AP});
+  List<String> CO;
+  List<String> AP;
+}
+
+class semiautoinputvalue {
+  semiautoinputvalue({
+    this.stc = '',
+    this.POID = '',
+    this.MATNO = '',
+    this.PO = '',
+    this.PLANT = '',
+    required this.checklist,
+    required this.CO,
+    required this.AP,
+  });
+
+  String stc;
+  String POID;
+  String MATNO;
+  String PO;
+  String PLANT;
+  List<String> checklist;
   List<String> CO;
   List<String> AP;
 }
