@@ -263,6 +263,63 @@ class HydrophilicDataSetBloc
           f22: databuff[i]['SPEC']['CE'] == null
               ? ''
               : databuff[i]['SPEC']['CE']['LOW'].toString(),
+          //
+          f65: databuff[i]['SPECcoa']['COLOR'] ?? '',
+          f66: databuff[i]['SPECcoa']['APPEARANCE'] ?? '',
+          f67: databuff[i]['SPECcoa']['SG'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['SG']['HI'].toString(),
+          f68: databuff[i]['SPECcoa']['SG'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['SG']['LOW'].toString(),
+          f69: databuff[i]['SPECcoa']['FA'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['FA']['HI'].toString(),
+          f70: databuff[i]['SPECcoa']['FA'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['FA']['LOW'].toString(),
+          f71: databuff[i]['SPECcoa']['TA'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['TA']['HI'].toString(),
+          f72: databuff[i]['SPECcoa']['TA'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['TA']['LOW'].toString(),
+          f73: databuff[i]['SPECcoa']['PH'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['PH']['HI'].toString(),
+          f74: databuff[i]['SPECcoa']['PH'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['PH']['LOW'].toString(),
+          f75: databuff[i]['SPECcoa']['NVC'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['NVC']['HI'].toString(),
+          f76: databuff[i]['SPECcoa']['NVC'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['NVC']['LOW'].toString(),
+          f77: databuff[i]['SPECcoa']['Brix'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['Brix']['HI'].toString(),
+          f78: databuff[i]['SPECcoa']['Brix'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['Brix']['LOW'].toString(),
+          f79: databuff[i]['SPECcoa']['CR3'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['CR3']['HI'].toString(),
+          f80: databuff[i]['SPECcoa']['CR3'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['CR3']['LOW'].toString(),
+          f81: databuff[i]['SPECcoa']['CECM'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['CECM']['HI'].toString(),
+          f82: databuff[i]['SPECcoa']['CECM'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['CECM']['LOW'].toString(),
+          f83: databuff[i]['SPECcoa']['CE'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['CE']['HI'].toString(),
+          f84: databuff[i]['SPECcoa']['CE'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['CE']['LOW'].toString(),
         ));
       }
     } else {}

@@ -530,6 +530,144 @@ class LIQUIDDataSetBloc extends Bloc<LIQUIDDataSetEvent, List<dataset>> {
           f48: databuff[i]['SPEC']['RP'] == null
               ? ''
               : databuff[i]['SPEC']['RP']['LOW'].toString(),
+          //
+          f65: databuff[i]['SPEC']['COLOR'] ?? '',
+          f66: databuff[i]['SPEC']['APPEARANCE'] ?? '',
+          f67: databuff[i]['SPEC']['SG'] == null
+              ? ''
+              : databuff[i]['SPEC']['SG']['HI'].toString(),
+          f68: databuff[i]['SPEC']['SG'] == null
+              ? ''
+              : databuff[i]['SPEC']['SG']['LOW'].toString(),
+          f69: databuff[i]['SPEC']['FA'] == null
+              ? ''
+              : databuff[i]['SPEC']['FA']['HI'].toString(),
+          f70: databuff[i]['SPEC']['FA'] == null
+              ? ''
+              : databuff[i]['SPEC']['FA']['LOW'].toString(),
+          f71: databuff[i]['SPEC']['TA'] == null
+              ? ''
+              : databuff[i]['SPEC']['TA']['HI'].toString(),
+          f72: databuff[i]['SPEC']['TA'] == null
+              ? ''
+              : databuff[i]['SPEC']['TA']['LOW'].toString(),
+          f73: databuff[i]['SPEC']['F_Al'] == null
+              ? ''
+              : databuff[i]['SPEC']['F_Al']['HI'].toString(),
+          f74: databuff[i]['SPEC']['F_Al'] == null
+              ? ''
+              : databuff[i]['SPEC']['F_Al']['LOW'].toString(),
+          f75: databuff[i]['SPEC']['T_Al'] == null
+              ? ''
+              : databuff[i]['SPEC']['T_Al']['HI'].toString(),
+          f76: databuff[i]['SPEC']['T_Al'] == null
+              ? ''
+              : databuff[i]['SPEC']['T_Al']['LOW'].toString(),
+          f77: databuff[i]['SPEC']['PH'] == null
+              ? ''
+              : databuff[i]['SPEC']['PH']['HI'].toString(),
+          f78: databuff[i]['SPEC']['PH'] == null
+              ? ''
+              : databuff[i]['SPEC']['PH']['LOW'].toString(),
+          f79: databuff[i]['SPEC']['AL'] == null
+              ? ''
+              : databuff[i]['SPEC']['AL']['HI'].toString(),
+          f80: databuff[i]['SPEC']['AL'] == null
+              ? ''
+              : databuff[i]['SPEC']['AL']['LOW'].toString(),
+          //
+          f81: databuff[i]['SPEC']['CE'] == null
+              ? ''
+              : databuff[i]['SPEC']['CE']['HI'].toString(),
+          f82: databuff[i]['SPEC']['CE'] == null
+              ? ''
+              : databuff[i]['SPEC']['CE']['LOW'].toString(),
+          f83: databuff[i]['SPEC']['CR6'] == null
+              ? ''
+              : databuff[i]['SPEC']['CR6']['HI'].toString(),
+          f84: databuff[i]['SPEC']['CR6'] == null
+              ? ''
+              : databuff[i]['SPEC']['CR6']['LOW'].toString(),
+          f85: databuff[i]['SPEC']['TCr'] == null
+              ? ''
+              : databuff[i]['SPEC']['TCr']['HI'].toString(),
+          f86: databuff[i]['SPEC']['TCr'] == null
+              ? ''
+              : databuff[i]['SPEC']['TCr']['LOW'].toString(),
+          f87: databuff[i]['SPEC']['MN'] == null
+              ? ''
+              : databuff[i]['SPEC']['MN']['HI'].toString(),
+          f88: databuff[i]['SPEC']['MN'] == null
+              ? ''
+              : databuff[i]['SPEC']['MN']['LOW'].toString(),
+          f89: databuff[i]['SPEC']['NI'] == null
+              ? ''
+              : databuff[i]['SPEC']['NI']['HI'].toString(),
+          f90: databuff[i]['SPEC']['NI'] == null
+              ? ''
+              : databuff[i]['SPEC']['NI']['LOW'].toString(),
+          f91: databuff[i]['SPEC']['NVC'] == null
+              ? ''
+              : databuff[i]['SPEC']['NVC']['HI'].toString(),
+          f92: databuff[i]['SPEC']['NVC'] == null
+              ? ''
+              : databuff[i]['SPEC']['NVC']['LOW'].toString(),
+          f93: databuff[i]['SPEC']['Starch'] == null
+              ? ''
+              : databuff[i]['SPEC']['Starch']['HI'].toString(),
+          f94: databuff[i]['SPEC']['Starch'] == null
+              ? ''
+              : databuff[i]['SPEC']['Starch']['LOW'].toString(),
+          f95: databuff[i]['SPEC']['V'] == null
+              ? ''
+              : databuff[i]['SPEC']['V']['HI'].toString(),
+          f96: databuff[i]['SPEC']['V'] == null
+              ? ''
+              : databuff[i]['SPEC']['V']['LOW'].toString(),
+          f97: databuff[i]['SPEC']['ZN'] == null
+              ? ''
+              : databuff[i]['SPEC']['ZN']['HI'].toString(),
+          f98: databuff[i]['SPEC']['ZN'] == null
+              ? ''
+              : databuff[i]['SPEC']['ZN']['LOW'].toString(),
+
+          f99: databuff[i]['SPEC']['ZR'] == null
+              ? ''
+              : databuff[i]['SPEC']['ZR']['HI'].toString(),
+          f100: databuff[i]['SPEC']['ZR'] == null
+              ? ''
+              : databuff[i]['SPEC']['ZR']['LOW'].toString(),
+
+          f101: databuff[i]['SPEC']['Viscosity'] == null
+              ? ''
+              : databuff[i]['SPEC']['Viscosity']['HI'].toString(),
+          f102: databuff[i]['SPEC']['Viscosity'] == null
+              ? ''
+              : databuff[i]['SPEC']['Viscosity']['LOW'].toString(),
+          f103: databuff[i]['SPEC']['TI'] == null
+              ? ''
+              : databuff[i]['SPEC']['TI']['HI'].toString(),
+          f104: databuff[i]['SPEC']['TI'] == null
+              ? ''
+              : databuff[i]['SPEC']['TI']['LOW'].toString(),
+          f105: databuff[i]['SPEC']['Surfactant'] == null
+              ? ''
+              : databuff[i]['SPEC']['Surfactant']['HI'].toString(),
+          f106: databuff[i]['SPEC']['Surfactant'] == null
+              ? ''
+              : databuff[i]['SPEC']['Surfactant']['LOW'].toString(),
+          f107: databuff[i]['SPEC']['FE'] == null
+              ? ''
+              : databuff[i]['SPEC']['FE']['HI'].toString(),
+          f108: databuff[i]['SPEC']['FE'] == null
+              ? ''
+              : databuff[i]['SPEC']['FE']['LOW'].toString(),
+          f109: databuff[i]['SPEC']['RP'] == null
+              ? ''
+              : databuff[i]['SPEC']['RP']['HI'].toString(),
+          f110: databuff[i]['SPEC']['RP'] == null
+              ? ''
+              : databuff[i]['SPEC']['RP']['LOW'].toString(),
         ));
       }
     } else {}

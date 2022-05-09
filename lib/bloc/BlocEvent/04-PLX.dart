@@ -222,6 +222,51 @@ class PLXDataSetBloc extends Bloc<PLXDataSetEvent, List<dataset>> {
           f18: databuff[i]['SPEC']['NVC'] == null
               ? ''
               : databuff[i]['SPEC']['NVC']['LOW'].toString(),
+          //
+          f65: databuff[i]['SPECcoa']['COLOR'] ?? '',
+          f66: databuff[i]['SPECcoa']['APPEARANCE'] ?? '',
+          f67: databuff[i]['SPECcoa']['TC'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['TC']['HI'].toString(),
+          f68: databuff[i]['SPECcoa']['TC'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['TC']['LOW'].toString(),
+          f69: databuff[i]['SPECcoa']['THOP'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['THOP']['HI'].toString(),
+          f70: databuff[i]['SPECcoa']['THOP'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['THOP']['LOW'].toString(),
+          f71: databuff[i]['SPECcoa']['FHOP'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['FHOP']['HI'].toString(),
+          f72: databuff[i]['SPECcoa']['FHOP'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['FHOP']['LOW'].toString(),
+          f73: databuff[i]['SPECcoa']['FT'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['FT']['HI'].toString(),
+          f74: databuff[i]['SPECcoa']['FT'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['FT']['LOW'].toString(),
+          f75: databuff[i]['SPECcoa']['Viscosity'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['Viscosity']['HI'].toString(),
+          f76: databuff[i]['SPECcoa']['Viscosity'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['Viscosity']['LOW'].toString(),
+          f77: databuff[i]['SPECcoa']['PaticleSize'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['PaticleSize']['HI'].toString(),
+          f78: databuff[i]['SPECcoa']['PaticleSize'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['PaticleSize']['LOW'].toString(),
+          f79: databuff[i]['SPECcoa']['NVC'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['NVC']['HI'].toString(),
+          f80: databuff[i]['SPECcoa']['NVC'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['NVC']['LOW'].toString(),
         ));
       }
     } else {}

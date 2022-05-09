@@ -203,6 +203,45 @@ class PremixDataSetBloc extends Bloc<PremixDataSetEvent, List<dataset>> {
           f16: databuff[i]['SPEC']['MN'] == null
               ? ''
               : databuff[i]['SPEC']['MN']['LOW'].toString(),
+          //
+          f65: databuff[i]['SPECcoa']['COLOR'] ?? '',
+          f66: databuff[i]['SPECcoa']['APPEARANCE'] ?? '',
+          f67: databuff[i]['SPECcoa']['SG'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['SG']['HI'].toString(),
+          f68: databuff[i]['SPECcoa']['SG'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['SG']['LOW'].toString(),
+          f69: databuff[i]['SPECcoa']['FA'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['FA']['HI'].toString(),
+          f70: databuff[i]['SPECcoa']['FA'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['FA']['LOW'].toString(),
+          f71: databuff[i]['SPECcoa']['TA'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['TA']['HI'].toString(),
+          f72: databuff[i]['SPECcoa']['TA'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['TA']['LOW'].toString(),
+          f73: databuff[i]['SPECcoa']['ZN'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['ZN']['HI'].toString(),
+          f74: databuff[i]['SPECcoa']['ZN'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['ZN']['LOW'].toString(),
+          f75: databuff[i]['SPECcoa']['NI'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['NI']['HI'].toString(),
+          f76: databuff[i]['SPECcoa']['NI'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['NI']['LOW'].toString(),
+          f77: databuff[i]['SPECcoa']['MN'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['MN']['HI'].toString(),
+          f78: databuff[i]['SPECcoa']['MN'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['MN']['LOW'].toString(),
         ));
       }
     } else {}

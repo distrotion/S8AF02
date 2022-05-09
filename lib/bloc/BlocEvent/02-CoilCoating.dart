@@ -223,6 +223,51 @@ class CoilCoatingDataSetBloc
           f18: databuff[i]['SPEC']['PURITY'] == null
               ? ''
               : databuff[i]['SPEC']['PURITY']['LOW'].toString(),
+//
+          f65: databuff[i]['SPECcoa']['COLOR'] ?? '',
+          f66: databuff[i]['SPECcoa']['APPEARANCE'] ?? '',
+          f67: databuff[i]['SPECcoa']['SG'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['SG']['HI'].toString(),
+          f68: databuff[i]['SPECcoa']['SG'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['SG']['LOW'].toString(),
+          f69: databuff[i]['SPECcoa']['FA'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['FA']['HI'].toString(),
+          f70: databuff[i]['SPECcoa']['FA'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['FA']['LOW'].toString(),
+          f71: databuff[i]['SPECcoa']['TA'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['TA']['HI'].toString(),
+          f72: databuff[i]['SPECcoa']['TA'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['TA']['LOW'].toString(),
+          f73: databuff[i]['SPECcoa']['T_Al'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['T_Al']['HI'].toString(),
+          f74: databuff[i]['SPECcoa']['T_Al'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['T_Al']['LOW'].toString(),
+          f75: databuff[i]['SPECcoa']['PH'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['PH']['HI'].toString(),
+          f76: databuff[i]['SPECcoa']['PH'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['PH']['LOW'].toString(),
+          f77: databuff[i]['SPECcoa']['NVC'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['NVC']['HI'].toString(),
+          f78: databuff[i]['SPECcoa']['NVC'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['NVC']['LOW'].toString(),
+          f79: databuff[i]['SPECcoa']['PURITY'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['PURITY']['HI'].toString(),
+          f80: databuff[i]['SPECcoa']['PURITY'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['PURITY']['LOW'].toString(),
         ));
       }
     } else {}

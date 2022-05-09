@@ -101,6 +101,63 @@ class POWDERDataSetBloc extends Bloc<POWDERDataSetEvent, List<dataset>> {
           f22: databuff[i]['SPEC']['BABCOCK'] == null
               ? ''
               : databuff[i]['SPEC']['BABCOCK']['LOW'].toString(),
+          //
+          f65: databuff[i]['SPECcoa']['COLOR'] ?? '',
+          f66: databuff[i]['SPECcoa']['APPEARANCE'] ?? '',
+          f67: databuff[i]['SPECcoa']['SG'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['SG']['HI'].toString(),
+          f68: databuff[i]['SPECcoa']['SG'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['SG']['LOW'].toString(),
+          f69: databuff[i]['SPECcoa']['FA'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['FA']['HI'].toString(),
+          f70: databuff[i]['SPECcoa']['FA'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['FA']['LOW'].toString(),
+          f71: databuff[i]['SPECcoa']['TA'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['TA']['HI'].toString(),
+          f72: databuff[i]['SPECcoa']['TA'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['TA']['LOW'].toString(),
+          f73: databuff[i]['SPECcoa']["F_Al"] == null
+              ? ''
+              : databuff[i]['SPECcoa']["F_Al"]['HI'].toString(),
+          f74: databuff[i]['SPECcoa']["F_Al"] == null
+              ? ''
+              : databuff[i]['SPECcoa']["F_Al"]['LOW'].toString(),
+          f75: databuff[i]['SPECcoa']['T_Al'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['T_Al']['HI'].toString(),
+          f76: databuff[i]['SPECcoa']['T_Al'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['T_Al']['LOW'].toString(),
+          f77: databuff[i]['SPECcoa']['ACO'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['ACO']['HI'].toString(),
+          f78: databuff[i]['SPECcoa']['ACO'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['ACO']['LOW'].toString(),
+          f79: databuff[i]['SPECcoa']['PH'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['PH']['HI'].toString(),
+          f80: databuff[i]['SPECcoa']['PH'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['PH']['LOW'].toString(),
+          f81: databuff[i]['SPECcoa']['CR6'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['CR6']['HI'].toString(),
+          f82: databuff[i]['SPECcoa']['CR6'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['CR6']['LOW'].toString(),
+          f83: databuff[i]['SPECcoa']['BABCOCK'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['BABCOCK']['HI'].toString(),
+          f84: databuff[i]['SPECcoa']['BABCOCK'] == null
+              ? ''
+              : databuff[i]['SPECcoa']['BABCOCK']['LOW'].toString(),
         ));
       }
     } else {}
